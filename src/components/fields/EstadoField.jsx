@@ -4,7 +4,7 @@ import EstadoInput from "../inputs/EstadoInput";
 function EstadoField(){
     return(
       <div>
-        <label className={styles.cardEstado}>Estado</label>
+        <label className={styles.textEstado}>Estado</label>
         <EstadoInput/>
       </div>
     );

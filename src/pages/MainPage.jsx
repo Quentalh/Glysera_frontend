@@ -7,8 +7,24 @@ function MainPage(){
       <header></header>
       <Menu/>
         <main>
-          <h1 className={styles.title} >Conteúdo da Página</h1>
-          <p className={styles.pragraph}>Este é o conteúdo principal do sistema.</p>
+         <section className="cards">
+          <div className="card destaque">
+            <h3>Última Medição</h3>
+            <p className="valor">115 mg/dL</p>
+            <span className="status normal">Normal</span>
+          </div>
+
+          <div className="card grafico">
+            <h3>Histórico da Semana</h3>
+            <div className="grafico-fake">📊 (gráfico aqui)</div>
+          </div>
+
+          <div className="card acoes">
+            <button>➕ Registrar Medição</button>
+            <button>📊 Ver Histórico</button>
+            <button>⚙️ Configurações</button>
+          </div>
+        </section>
         </main>
         <footer>
           <p className={styles.pragraph}>Todos os direitos reservados.</p>

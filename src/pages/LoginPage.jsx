@@ -11,7 +11,7 @@ function LoginPage(){
       <img src={Logo} alt="Logo Glysera" className={styles.logo} />
       <h2 className={styles.title}>Painel de Acesso</h2>
     <LoginForm/>
-     <Link to="/HomePage">
+     <Link to="/MainPage">
         <LoginButton/>
     </Link>
     </div>
