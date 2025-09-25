@@ -37,21 +37,24 @@
 a .cadastro_btn{
   width: 225px;
   height: 70px;
-  background-color: #b0e0e6;
+  background-color: #3FBFAD;
   border-radius: 30px;
   font-size: 20px;
+  color:white;
 }
 a .consultas_btn{
   width: 225px;
   height: 70px;
-  background-color: #b0e0e6;
+  background-color: #3FBFAD;
   border-radius: 30px;
+  color: white;
   font-size: 20px;
 }
 a .gerenciamento_btn{
   width:225px;
   height:70px;
-  background-color: #b0e0e6;
+  background-color: #3FBFAD;
+  color: white;
   border-radius: 30px;
   font-size: 20px;
 }
