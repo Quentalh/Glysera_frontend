@@ -1,14 +1,57 @@
 .container {
-  display: flex;
-
+  display: grid;
+  grid-template-rows: repeat(8,1fr);
+  grid-template-columns: repeat(6,1fr);
+  height: 100vh;
 }
 
 .title {
   background-color: aquamarine;
   font-size: 25px;
 }
-
-.paragraph {
-  font-family: Verdana;
-  font-size: 54px;
+.mainfooter {
+  grid-row: 8 / 9;
+  grid-column: 3/5;
+  justify-self: center;
+  align-self: center;
+}
+.card {
+  grid-row: 1/2;
+  grid-column: 1/2;
+}
+.icon {
+  font-size: 20px;
+}
+.container_cadastro{
+  grid-row: 4/5;
+  grid-column: 2/3;
+}
+.container_consultas{
+  grid-row: 4/5;
+  grid-column: 3/5;
+}
+.container_gerenciamento{
+  grid-row: 4/5;
+  grid-column: 5/6;
+}
+a .cadastro_btn{
+  width: 225px;
+  height: 70px;
+  background-color: #b0e0e6;
+  border-radius: 30px;
+  font-size: 20px;
+}
+a .consultas_btn{
+  width: 225px;
+  height: 70px;
+  background-color: #b0e0e6;
+  border-radius: 30px;
+  font-size: 20px;
+}
+a .gerenciamento_btn{
+  width:225px;
+  height:70px;
+  background-color: #b0e0e6;
+  border-radius: 30px;
+  font-size: 20px;
 }

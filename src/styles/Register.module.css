@@ -1,6 +1,10 @@
 .container{
+  height: 100vh;
   margin: 0;
   padding: 0;
+  display:grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(10, 1fr);
 }
 
 .btnRegister {
@@ -252,4 +256,14 @@
 
 .cardData::-webkit-calendar-picker-indicator:hover {
   opacity: 1;
+}
+.registerfooter{
+  grid-row: 10/11;
+  grid-column: 4/6;
+  justify-self: center;
+  align-self: center;
+}
+main{
+  grid-row: 1/11;
+  grid-column: 4/6;
 }

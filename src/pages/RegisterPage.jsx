@@ -2,6 +2,7 @@ import Menu from "../components/items/Menu";
 import styles from "../styles/Register.module.css";
 import RegisterForm from "../components/forms/RegisterForm";
 import RegisterButton from "../components/buttons/RegisterButton";
+import Copyright from "../components/items/Footer"
 
 function RegisterPage(){
 
@@ -13,8 +14,8 @@ function RegisterPage(){
             <RegisterForm/>
             <RegisterButton/>
           </main>
-          <footer>
-
+          <footer className={styles.registerfooter}>
+            <Copyright/>
           </footer>
         </div>
     ); 

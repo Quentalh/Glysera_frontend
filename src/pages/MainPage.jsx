@@ -1,12 +1,15 @@
 import styles from "../styles/Main.module.css";
-import Menu from "../components/items/Menu";
+import Copyright from "../components/items/Footer";
+import { FaUsers } from "react-icons/fa";
+import { FaSearch } from "react-icons/fa";
+import { FaFileAlt } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 function MainPage(){
   return(
     <div className={styles.container}>
       <header></header>
-      <Menu/>
-        <main>
+        <main className={styles.card}>
          <section className="cards">
           <div className="card destaque">
             <h3>Última Medição</h3>
@@ -26,8 +29,23 @@ function MainPage(){
           </div>
         </section>
         </main>
-        <footer>
-          <p className={styles.pragraph}>Todos os direitos reservados.</p>
+        <div className={styles.container_cadastro}>
+          <Link to="/RegisterPage" className={styles.link}>
+            <button className={styles.cadastro_btn}><FaUsers className={styles.icon}/>Cadastro</button>
+          </Link>
+        </div>
+        <div className={styles.container_consultas}>
+          <Link to="/ManagePage" className={styles.link}>
+            <button className={styles.consultas_btn}><FaSearch className={styles.icon}/>Consultas</button>
+          </Link>
+        </div>
+        <div className={styles.container_gerenciamento}>
+          <Link to="/QueryPage" className={styles.link}>
+            <button className={styles.gerenciamento_btn}><FaFileAlt className={styles.icon}/>Gerenciamento</button>
+          </Link>
+        </div>
+        <footer className={styles.mainfooter}>
+          <Copyright />
         </footer>
     </div>
   );

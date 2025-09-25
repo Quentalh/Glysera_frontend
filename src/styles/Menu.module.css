@@ -12,7 +12,7 @@
   top: 0;
   background-color: #e0ffff;
   color: #333333;
-  padding: 14px 20px;
+  padding: 13px 20px;
   cursor: pointer;
   font-size: 18px;
   z-index: 10;
@@ -42,10 +42,14 @@
   margin: 50px 0 0 0;
 }
 
-.menu li {
+.menu li a{
   border-bottom: 1px solid #c8e8ff;
+  height: 20px;
+  padding: 30px 20px;
 }
-
+.menu li{
+  height: 81px;
+}
 .logout {
   margin-top: auto;
 }
