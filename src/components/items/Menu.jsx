@@ -2,9 +2,11 @@ import styles from "../../styles/Menu.module.css";
 import ItemRegister from "./ItemRegister";
 import ItemManage from "./ItemManage";
 import ItemQuery from "./ItemQuery";
+import ItemHome from "./ItemHome";
 import ItemLogout from "./ItemLogout";
 import ToggleBtn from "./ToggleBtn";
 import { Link } from "react-router-dom";
+import ItemEquipment from "./ItemEquipment";
 
 
 function Menu(){
@@ -26,6 +28,16 @@ function Menu(){
           <li>
             <Link to="/QueryPage" className={styles.link}>
               <ItemQuery/>
+            </Link>
+          </li>
+          <li>
+            <Link to="/MainPage" className={styles.link}>
+              <ItemHome/>
+            </Link>
+          </li>
+          <li>
+            <Link to="/EquipmentPage" className={styles.link}>
+              <ItemEquipment/>
             </Link>
           </li>
           <li className={styles.logout}>
