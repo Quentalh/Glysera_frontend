@@ -35,7 +35,7 @@ function Menu(){
               <ItemHome/>
             </Link>
           </li>
-          <li>
+          <li className={styles.equipment}>
             <Link to="/EquipmentPage" className={styles.link}>
               <ItemEquipment/>
             </Link>

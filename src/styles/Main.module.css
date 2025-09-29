@@ -3,6 +3,10 @@
   grid-template-rows: repeat(8,1fr);
   grid-template-columns: repeat(6,1fr);
   height: 100vh;
+  background-image: url('../assets/icon_background.png');
+  background-size: 600px;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .title {
@@ -20,41 +24,114 @@
   grid-column: 1/2;
 }
 .icon {
-  font-size: 20px;
+  font-size: 70px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 .container_cadastro{
-  grid-row: 4/5;
-  grid-column: 2/3;
+  grid-row: 7/8;
+  grid-column: 2/4;
+  width: 300px;
+  height: 150px;
+  justify-self: center;
+  align-self: center;
 }
 .container_consultas{
-  grid-row: 4/5;
+  grid-row: 7/8;
   grid-column: 3/5;
+  width: 300px;
+  height: 150px;
+  justify-self: center;
+  align-self: center;
 }
 .container_gerenciamento{
-  grid-row: 4/5;
-  grid-column: 5/6;
+  grid-row: 7/8;
+  grid-column: 4/6;
+  width: 300px;
+  height: 150px;
+  justify-self: center;
+  align-self: center;
+}
+a {
+  text-decoration:none;
 }
 a .cadastro_btn{
-  width: 225px;
-  height: 70px;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  height: 150px;
   background-color: #3FBFAD;
   border-radius: 30px;
-  font-size: 20px;
+  font-size: 40px;
   color:white;
 }
 a .consultas_btn{
-  width: 225px;
-  height: 70px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  justify-self:center;
+  width: 300px;
+  height: 150px;
   background-color: #3FBFAD;
   border-radius: 30px;
-  color: white;
-  font-size: 20px;
+  font-size: 40px;
+  color:white;
 }
 a .gerenciamento_btn{
-  width:225px;
-  height:70px;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  width: 300px;
+  height: 150px;
   background-color: #3FBFAD;
-  color: white;
   border-radius: 30px;
-  font-size: 20px;
+  font-size: 40px;
+  color:white;
+}
+.dropdown{
+  position: relative;
+  display: grid;
+  margin: 20px;
+  grid-column: 5/6
+}
+.dropdownMenu {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, opacity 0.3s ease;
+  position: absolute;
+  top: 110%;
+  left: 0;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  min-width: 160px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  z-index: 100;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.dropdownMenu.open {
+  max-height: 500px; /* Large enough for your menu */
+  max-height: 500px;
+  opacity: 1;
+}
+.dropdownItemRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 10px 16px;
+  cursor: pointer;
+  align-items: center;
+}
+
+.dropdownField {
+  min-width: 100px;
+  /* Optional: add more styling as needed */
 }
