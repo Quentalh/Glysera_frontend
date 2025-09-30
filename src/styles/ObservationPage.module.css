@@ -1,0 +1,82 @@
+.container{
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  display:grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(10, 1fr);
+}
+.obsform {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 500px;
+  grid-column: 4/6;
+  grid-row: 3/6;
+  justify-content: space-between;
+  align-items: center
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+.fieldContainer {
+  display: flex;
+  align-items: center;
+}
+
+.label {
+  font-weight: bold;
+  color: #4a4a4a;
+  width: 200px;
+  text-align: right;
+}
+
+.inputField, .textAreaField {
+  flex-grow: 1;
+  padding: 10px;
+  border: none;
+  background-color: #f0e6e6;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.textAreaField {
+  resize: vertical;
+}
+
+.saveButton {
+  background-color: #ff6347;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  align-self: center;
+  margin-top: 20px;
+}
+
+.saveButton:hover {
+  opacity: 0.9;
+}
+
+
+.uploadContainer {
+  flex-grow: 1;
+}
+
+.fileInput {
+  display: none;
+}
+
+.uploadLabel {
+  display: inline-block;
+  padding: 10px 15px;
+  background-color: #f0e6e6;
+  border-radius: 8px;
+  cursor: pointer;
+}

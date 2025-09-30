@@ -3,7 +3,7 @@ import styles from "../../styles/Footer.module.css"
 function Copyright(){
     return(
         <>
-        <footer className={styles.container}>©2025 Glysera.Todos os direitos reservados.</footer>
+        <footer className={styles.containercopyright}>©2025 Glysera.Todos os direitos reservados.</footer>
         </>
     )
 }

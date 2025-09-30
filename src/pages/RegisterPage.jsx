@@ -10,7 +10,7 @@ function RegisterPage(){
         <div className={styles.container}>
           <header></header>
           <Menu/>
-          <main>
+          <main className={styles.registerform}>
             <RegisterForm/>
             <RegisterButton/>
           </main>

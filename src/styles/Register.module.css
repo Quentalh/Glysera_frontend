@@ -15,8 +15,8 @@
   cursor: pointer;
   font-weight: bold;
   transition: transform 0.3s; 
-  color: #fff;
-  background-color: #3FBFAD;
+  color: #2e1c1c;
+  background-color: #ff6b35;
 }
 
 .btnRegister:hover {
@@ -263,7 +263,7 @@
   justify-self: center;
   align-self: center;
 }
-main{
+.registerform{
   grid-row: 1/11;
   grid-column: 4/6;
 }

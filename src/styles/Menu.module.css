@@ -1,7 +1,9 @@
 .container {
   display: flex;
 }
-
+.containercopyright{
+  display:flex;
+}
 .toggleInput {
   display: none;
 }
@@ -105,4 +107,14 @@
 
 .toggleInput:checked ~ .sidebar .text{
   display: none;
+}
+
+.dropdownToggleRed {
+  background-color: red;
+  color: white;
+}
+
+.dropdownToggleGreen {
+  background-color: #4CAF50;
+  color: white;
 }

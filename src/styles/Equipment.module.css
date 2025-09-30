@@ -6,3 +6,47 @@
   grid-template-columns: repeat(8, 1fr);
   grid-template-rows: repeat(10, 1fr);
 }
+
+.equipmentfooter{
+  grid-row: 10/11;
+  grid-column: 4/6;
+  justify-self: center;
+  align-self: center;
+}
+.containercadastro{
+  display: grid;
+  grid-template-rows: repeat(6,1fr);
+  grid-template-columns: repeat(2,1fr);
+  align-items: center;
+  grid-row: 3/8;
+  grid-column: 4/6; 
+}
+.containerform{
+  width: 100%;
+  height: 100%;
+  display:flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items:center;
+  grid-row: 1 / 3;
+  grid-column: 1 / 3;
+}
+.containerbtn{
+  grid-row: 3/4;
+  grid-column: 1/3;
+}
+.containerobs{
+  grid-row: 2/3;
+  grid-column: 6/7;
+}
+.obsbtn {
+  width: 150px;
+  height: 25px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: transform 0.3s; 
+  color: #2e1c1c;
+  background-color: #ff6b35;
+}

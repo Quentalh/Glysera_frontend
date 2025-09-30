@@ -4,7 +4,7 @@ function StatusInput (){
     return(
       <select
         className={styles.cardStatus}
-        type="Status do Paciente">
+        type="texto">
         <option value="">Selecione o status</option>
         <option value="Ativo">Ativo</option>
         <option value="Inativo">Inativo</option>
