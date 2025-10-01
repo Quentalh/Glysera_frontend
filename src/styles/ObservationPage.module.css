@@ -6,6 +6,12 @@
   grid-template-columns: repeat(8, 1fr);
   grid-template-rows: repeat(10, 1fr);
 }
+.containerfooter {
+  display:flex;
+  grid-column: 4/6;
+  grid-row: 10/11;
+  justify-self: center;
+}
 .obsform {
   display: flex;
   flex-direction: column;

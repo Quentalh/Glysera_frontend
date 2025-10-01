@@ -15,6 +15,16 @@ function Menu(){
         <ToggleBtn/>
       <nav className={styles.sidebar}>
         <ul className={styles.menu}>
+          <li>
+            <Link to="/MainPage" className={styles.link}>
+              <ItemHome/>
+            </Link>
+          </li>
+          <li>
+            <Link to="/QueryPage" className={styles.link}>
+              <ItemQuery/>
+            </Link>
+          </li>
            <li>
             <Link to="/RegisterPage" className={styles.link}>
               <ItemRegister/>
@@ -25,18 +35,9 @@ function Menu(){
               <ItemManage/>
             </Link>
           </li>
-          <li>
-            <Link to="/QueryPage" className={styles.link}>
-              <ItemQuery/>
-            </Link>
-          </li>
-          <li>
-            <Link to="/MainPage" className={styles.link}>
-              <ItemHome/>
-            </Link>
-          </li>
+          
           <li className={styles.equipment}>
-            <Link to="/EquipmentPage" className={styles.link}>
+            <Link to="/EquipmentPage" className={styles.link2}>
               <ItemEquipment/>
             </Link>
           </li>

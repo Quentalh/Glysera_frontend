@@ -2,6 +2,7 @@ import styles from "../styles/ObservationPage.module.css"
 import Menu from "../components/items/Menu";
 import ObsForm from "../components/forms/ObservationForm"
 import SaveButton from "../components/buttons/SaveButton"
+import Copyright from "../components/items/Footer"
 
 function ObsPage(){
     return(
@@ -12,6 +13,9 @@ function ObsPage(){
             <ObsForm/>
             <SaveButton/>
         </main>
+        <div className={styles.containerfooter}>
+            <Copyright/>
+        </div>
         </div>
     );
 };
