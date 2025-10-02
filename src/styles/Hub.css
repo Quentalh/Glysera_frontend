@@ -1,0 +1,19 @@
+:root {
+  --container-margin: 0 auto;
+  --container-text-align: center;
+  --font-base: 'Roboto', sans-serif;
+  --background-color: #f2f7f2; 
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: var(--background-color);
+  font-family: var(--font-base);
+  text-align: var(--container-text-align);
+}
+
+#root {
+  margin: var(--container-margin);
+}
