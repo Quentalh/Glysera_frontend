@@ -1,0 +1,269 @@
+.container{
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  display:grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(10, 1fr);
+}
+
+.btnRegister {
+  width: 150px;
+  height: 25px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: transform 0.3s; 
+  color: #2e1c1c;
+  background-color: #ff6b35;
+}
+
+.btnRegister:hover {
+  background-color: #84d8b9; 
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.text1{
+  font-size: 14px;
+  font-weight: 600;
+  color: #344955;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.text2{
+  font-size: 14px;
+  font-weight: 600;
+  color: #344955;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.text3{
+  font-size: 14px;
+  font-weight: 600;
+  color: #344955;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.cardNome {
+  width: 250px;
+  padding: 12px 14px;
+  border: 1px solid #DCE5E3;
+  border-radius: 12px;
+  background: #FFFFFF;
+  color: #1a1f36;
+  font-size: 15px;
+  transition: all 0.2s ease;
+}
+
+.cardNome:focus{
+  border-color: #3FBFAD; 
+  box-shadow: 0 0 0 4px rgba(63, 191, 173, 0.2); 
+  outline: none;
+}
+
+.cardNomeSocial{
+  width: 250px;
+  padding: 12px 14px;
+  border: 1px solid #DCE5E3;
+  border-radius: 12px;
+  background: #FFFFFF;
+  color: #1a1f36;
+  font-size: 15px;
+  transition: all 0.2s ease;
+}
+
+.cardNomeSocial:focus{
+  border-color: #3FBFAD; 
+  box-shadow: 0 0 0 4px rgba(63, 191, 173, 0.2); 
+  outline: none;
+}
+
+.cardNomeMae{
+  width: 250px;
+  padding: 12px 14px;
+  border: 1px solid #DCE5E3;
+  border-radius: 12px;
+  background: #FFFFFF;
+  color: #1a1f36;
+  font-size: 15px;
+  transition: all 0.2s ease;
+}
+
+.cardNomeMae:focus{
+  border-color: #3FBFAD; 
+  box-shadow: 0 0 0 4px rgba(63, 191, 173, 0.2); 
+  outline: none;
+}
+
+.cardCep {
+  width: 250px;
+  padding: 12px 14px;
+  border: 1px solid #DCE5E3;
+  border-radius: 12px;
+  background: #FFFFFF;
+  color: #1a1f36;
+  font-size: 15px;
+  transition: all 0.2s ease;
+}
+
+.cardCep:focus{
+  border-color: #3FBFAD; 
+  box-shadow: 0 0 0 4px rgba(63, 191, 173, 0.2); 
+  outline: none;
+}
+
+.cardRua {
+  width: 250px;
+  padding: 12px 14px;
+  border: 1px solid #DCE5E3;
+  border-radius: 12px;
+  background: #FFFFFF;
+  color: #1a1f36;
+  font-size: 15px;
+  transition: all 0.2s ease;
+}
+
+.cardRua:focus{
+  border-color: #3FBFAD; 
+  box-shadow: 0 0 0 4px rgba(63, 191, 173, 0.2); 
+  outline: none;
+}
+
+.cardCidade {
+  width: 250px;
+  padding: 12px 14px;
+  border: 1px solid #DCE5E3;
+  border-radius: 12px;
+  background: #FFFFFF;
+  color: #1a1f36;
+  font-size: 15px;
+  transition: all 0.2s ease;
+}
+
+.cardCidade:focus{
+  border-color: #3FBFAD; 
+  box-shadow: 0 0 0 4px rgba(63, 191, 173, 0.2); 
+  outline: none;
+}
+
+.cardEstado {
+  width: 250px;
+  padding: 12px 14px;
+  border: 1px solid #DCE5E3;
+  border-radius: 12px;
+  background: #FFFFFF;
+  color: #1a1f36;
+  font-size: 15px;
+  transition: all 0.2s ease;
+}
+
+.cardEstado:focus{
+  border-color: #3FBFAD; 
+  box-shadow: 0 0 0 4px rgba(63, 191, 173, 0.2); 
+  outline: none;
+}
+
+.cardNumero {
+  width: 250px;
+  padding: 12px 14px;
+  border: 1px solid #DCE5E3;
+  border-radius: 12px;
+  background: #FFFFFF;
+  color: #1a1f36;
+  font-size: 15px;
+  transition: all 0.2s ease;
+}
+
+.cardNumero:focus{
+  border-color: #3FBFAD; 
+  box-shadow: 0 0 0 4px rgba(63, 191, 173, 0.2); 
+  outline: none;
+}
+
+.cardComplemento {
+  width: 250px;
+  padding: 12px 14px;
+  border: 1px solid #DCE5E3;
+  border-radius: 12px;
+  background: #FFFFFF;
+  color: #1a1f36;
+  font-size: 15px;
+  transition: all 0.2s ease;
+}
+
+.cardComplemento:focus{
+  border-color: #3FBFAD; 
+  box-shadow: 0 0 0 4px rgba(63, 191, 173, 0.2); 
+  outline: none;
+}
+
+.cardMarca {
+  width: 250px;
+  padding: 12px 14px;
+  border: 1px solid #DCE5E3;
+  border-radius: 12px;
+  background: #FFFFFF;
+  color: #1a1f36;
+  font-size: 15px;
+  transition: all 0.2s ease;
+}
+
+.cardMarca:focus{
+  border-color: #3FBFAD; 
+  box-shadow: 0 0 0 4px rgba(63, 191, 173, 0.2); 
+  outline: none;
+}
+
+.cardStatus{
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+  border-color: #3FBFAD; 
+  background-color: #fff;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cardData {
+  padding: 8px 12px;
+  border: 2px solid #4a90e2;
+  border-radius: 8px;
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  outline: none;
+  transition: all 0.2s ease-in-out;
+}
+
+.cardData:focus {
+  border-color: #3FBFAD;
+  box-shadow: 0 0 6px rgba(63, 191, 173, 0.8);
+}
+
+.cardData::-webkit-calendar-picker-indicator {
+  background: url("icone.png") no-repeat center;
+  cursor: pointer;
+  opacity: 0.6;
+  width: 20px;
+  height: 20px;
+}
+
+.cardData::-webkit-calendar-picker-indicator:hover {
+  opacity: 1;
+}
+.registerfooter{
+  grid-row: 10/11;
+  grid-column: 4/6;
+  justify-self: center;
+  align-self: center;
+}
+.registerform{
+  grid-row: 1/11;
+  grid-column: 4/6;
+}
