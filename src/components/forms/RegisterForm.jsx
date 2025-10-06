@@ -7,9 +7,6 @@ import CidadeField from "../fields/CidadeField";
 import EstadoField from "../fields/EstadoField";
 import NumeroField from "../fields/NumeroField";
 import ComplementoField from "../fields/ComplementoField";
-import MarcaField from "../fields/MarcaField";
-import StatusField from "../fields/StatusField";
-import DataField from "../fields/DataField";
 import styles from "../../styles/Register.module.css";
 
 
@@ -28,11 +25,6 @@ function RegisterForm(){
         <EstadoField/>
         <NumeroField/>
         <ComplementoField/>
-
-        <label className={styles.text3}>Registro de Glicosimetro</label>
-        <MarcaField/>
-        <StatusField/>
-        <DataField/>
       </div>
     );
 }

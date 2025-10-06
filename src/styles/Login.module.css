@@ -16,7 +16,7 @@
 .textUser {
    font-size: 14px;
   font-weight: 600;
-  color: #344955;
+  color: #4a2b2b;
   display: block;
   margin-bottom: 6px;
  
@@ -25,7 +25,7 @@
 .textAcess {
    font-size: 14px;
   font-weight: 600;
-  color: #344955;
+  color: #4a2b2b;
   display: block;
   margin-bottom: 6px;
 }
@@ -43,7 +43,7 @@
 }
 
 .cardUser:focus {
-  border-color: #3FBFAD; 
+  border-color: #b0e5f0; 
   box-shadow: 0 0 0 4px rgba(63, 191, 173, 0.2); 
   outline: none;
 }
@@ -60,25 +60,30 @@
 }
 
 .cardAcess:focus {
-  border-color: #3FBFAD; 
+  border-color: #b0e5f0; 
   box-shadow: 0 0 0 4px rgba(63, 191, 173, 0.2); 
   outline: none;
 }
 
 .btnLogin {
   width: 150px;
-  height: 25px;
+  height: 35px;
   border: none;
   border-radius: 6px;
   cursor: pointer;
   font-weight: bold;
-  transition: transform 0.3s; 
-  color: #fff;
-  background-color: #3FBFAD;
+  font-size: 14px;
+  transition: all 0.25s ease-in-out; 
+  color: #2e1c1c;
+  background-color: #ff6b35;
 }
 
 .btnLogin:hover {
-  background-color: #84d8b9; 
+  background-color: #E85A29; 
   cursor: pointer;
-  transform: scale(1.1);
+  transform: scale(1.05);
+}
+
+.btnLogin:active {
+    transform: scale(0.98);
 }
