@@ -1,0 +1,110 @@
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(10, 1fr);
+  background-color: #e9f1f7;
+  min-height: 100vh;
+}
+
+.mainContent {
+  flex-grow: 1;
+  padding: 2rem 4rem;
+  grid-column: 3/8;
+  grid-row: 1/11;;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.header h1 {
+  color: #3e4a63;
+  margin: 0;
+  padding-left: 2rem;
+}
+
+.backButton {
+  background-color: #ff6b35;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.formGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem 3rem;
+  max-width: 900px;
+}
+
+.formField {
+  display: flex;
+  flex-direction: column;
+}
+
+.formField label {
+  font-weight: bold;
+  color: #3e4a63;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+}
+
+.inputWrapper {
+  position: relative;
+}
+
+.formField input {
+  background-color: #fdeee7;
+  border: 2px solid transparent;
+  padding: 0.8rem;
+  border-radius: 8px;
+  width: 100%;
+  font-size: 1rem;
+}
+
+.formField input:focus {
+  outline: none;
+  border-color: #ff6b35;
+}
+
+.editIcon {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #888;
+  pointer-events: none;
+}
+
+.saveButton {
+  grid-column: 1 / -1;
+  justify-self: center;
+  margin-top: 2rem;
+  background-color: #ff6b35;
+  color: white;
+  border: none;
+  padding: 1rem 3rem;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: background-color 0.2s;
+}
+
+.saveButton:hover {
+  background-color: #e6511a;
+}
+
+.errorMessage {
+  color: red;
+  grid-column: 1 / -1;
+  text-align: center;
+  font-weight: bold;
+}

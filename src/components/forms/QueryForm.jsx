@@ -1,5 +1,5 @@
-// components/forms/QueryForm.jsx
 import React, { useState } from 'react';
+import styles from '../../styles/Query.module.css'
 
 function ConsultasForm({ onSearchComplete }) {
   const [cpf, setCpf] = useState('');
@@ -25,16 +25,19 @@ function ConsultasForm({ onSearchComplete }) {
   };
 
   return (
-    <div>
-      <input
+    <div className={styles.querysearch}>
+      <label className={styles.labelqueryinput}>CPF</label>
+      <input className={styles.queryinput}
         type="text"
         value={cpf}
         onChange={(e) => setCpf(e.target.value)}
         placeholder="Digite o CPF do paciente"
       />
-      <button onClick={handleSearch} className="pesquisarButton">
-        Pesquisar
-      </button>
+      <div className={styles.containerquerybtn}>
+        <button onClick={handleSearch} className={styles.querybtn}>
+          Pesquisar
+        </button>
+      </div>
     </div>
   );
 }

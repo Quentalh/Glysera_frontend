@@ -1,4 +1,5 @@
 import { Routes, Route } from 'react-router-dom';
+import EditPage from '../pages/EditPage';
 import HomePage from '../pages/HomePage';
 import LoginPage from '../pages/LoginPage';
 import MainPage from '../pages/MainPage';
@@ -27,6 +28,8 @@ function Hub() {
       <Route path="/ObservationPage" element={<ObservationPage/>}/>
 
       <Route path="/QueryPage" element={<QueryPage/>}/>
+
+      <Route path="/EditPage" element={<EditPage/>}/>
 
     </Routes>
   

@@ -1,5 +1,6 @@
-// pages/QueryPage.jsx
+// src/pages/QueryPage.jsx
 import React, { useState } from "react";
+import { Link } from 'react-router-dom';
 import ConsultasForm from "../components/forms/QueryForm";
 import styles from "../styles/Query.module.css";
 import Copyright from "../components/items/Footer";
@@ -9,7 +10,7 @@ function QueryPage() {
   const [searchStatus, setSearchStatus] = useState('idle');
   const [paciente, setPaciente] = useState(null);
   const [equipamento, setEquipamento] = useState(null);
-  const [message, setMessage] = useState('Nenhum paciente pesquisado.');
+  const [message, setMessage] = useState('');
 
   const handleSearchResult = (result) => {
     setSearchStatus(result.status);
@@ -18,39 +19,54 @@ function QueryPage() {
       setEquipamento(result.data.equipamento);
       setMessage('');
     } else {
+      
       setPaciente(null);
       setEquipamento(null);
-      setMessage(result.message);
+      setMessage(result.message || 'Ocorreu um erro.');
     }
   };
 
   return (
     <div className={styles.container}>
+      <header className={styles.containerheader}>
+        <h1>Consulta de Pacientes</h1>
+      </header>
       <Menu/>
       <main className={styles.containerform}>
-        <div className={styles.searchArea}>
-          <ConsultasForm onSearchComplete={handleSearchResult} />
-          <div className={styles.statusIcon}>
-            {searchStatus === 'found' && <span style={{color: 'green', fontSize: '2rem'}}>✅</span>}
-            {(searchStatus === 'not_found' || searchStatus === 'error') && <span style={{color: 'red', fontSize: '2rem'}}>❌</span>}
-          </div>
-        </div>
+        <ConsultasForm onSearchComplete={handleSearchResult} />
 
         {searchStatus === 'found' && paciente && (
-          <div className={styles.resultsContainer}>
-            <h2>Dados do Paciente</h2>
-            <p><strong>Nome:</strong> {paciente.nome}</p>
-            <p><strong>Data de Nascimento:</strong> {new Date(paciente.nascimento_date).toLocaleDateString()}</p>
-
-            <h3 style={{marginTop: '20px'}}>Equipamento Associado</h3>
-            {equipamento ? (
-              <p>{equipamento.nome_do_equipamento || 'Equipamento sem nome'}</p>
-            ) : (
-              <p>Nenhum equipamento encontrado para este paciente.</p>
-            )}
+          <div className={styles.actionsContainer}>
+            <Link to="/EditPage" state={{ paciente: paciente }}>
+              <button className={styles.editarButton}>EDITAR</button>
+            </Link>
           </div>
         )}
-
+        <div className={styles.resultsWrapper}>
+          <div className={styles.resultsList}>
+            <div className={styles.resultsHeader}>
+              <span className={styles.column}>EQUIPAMENTO</span>
+              <span className={styles.column}>NOME DO PACIENTE</span>
+              <span className={styles.column}>DATA DE NASCIMENTO</span>
+              <span className={styles.columnIcon}></span>
+            </div>
+            {searchStatus === 'found' && paciente && (
+              <div className={styles.resultsRow}>
+                <span className={styles.column}>
+                  {equipamento ? (equipamento.nome_do_equipamento || 'Não informado') : 'Nenhum'}
+                </span>
+                <span className={styles.column}>{paciente.nome}</span>
+                <span className={styles.column}>
+                  {new Date(paciente.nascimento_date).toLocaleDateString()}
+                </span>
+              </div>
+            )}
+          </div>
+          <div className={styles.statusIcon}>
+            {searchStatus === 'found' && <span>✅</span>}
+            {(searchStatus === 'not_found' || searchStatus === 'error') && <span>❌</span>}
+          </div>
+        </div>
         {(searchStatus === 'not_found' || searchStatus === 'error') && (
             <p className={styles.errorMessage}>{message}</p>
         )}
