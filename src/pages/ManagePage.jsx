@@ -2,6 +2,8 @@ import styles from "../styles/ManagePage.module.css";
 import Menu from "../components/items/Menu";
 import Copyright from "../components/items/Footer";
 import { useState } from "react";
+import jsPDF from "jspdf";
+import AtestadoTexto from "../components/AtestadoTexto/AtestadoTexto";
 
 function ManagePage() {
     const [cpfInput, setCpfInput] = useState(''); 
@@ -44,12 +46,38 @@ function ManagePage() {
             setLoading(false);
         }
     };
+            const emitirPDF = () => {
+        if (!paciente.nome) {
+            alert("Busque um paciente antes de emitir o atestado.");
+            return;
+        }
+
+        const doc = new jsPDF({
+            orientation: "portrait",
+            unit: "mm",
+            format: "a4",
+        });
+
+        doc.setFont("helvetica", "bold");
+        doc.setFontSize(16);
+        doc.text("ATESTADO DE RECEBIMENTO", 105, 30, { align: "center" });
+
+        
+        const texto = AtestadoTexto({ paciente, cpf: cpfInput });
+
+        doc.setFont("helvetica", "normal");
+        doc.setFontSize(12);
+        const lines = doc.splitTextToSize(texto, 170);
+        doc.text(lines, 20, 50);
+
+        doc.save(`Atestado_${paciente.nome}.pdf`);
+        };
 
     return (
         <div className={styles.container}>
             <Menu />
             
-            <main className={styles.mainContent}>
+            <main className={styles.Principal}>
                 <h1 className={styles.titulo}>Busca de Paciente</h1>
                 <div className={styles.searchBox}>
                     <input 
@@ -70,10 +98,18 @@ function ManagePage() {
                     <input type="text" value={paciente.nome} placeholder="Nome do Paciente" readOnly />
                     <input type="text" value={paciente.unidadeSaude} placeholder="Unidade de Saúde" readOnly />
                     {/* Formulário*/}
+                    <button
+                className={styles.emitirBtn}
+                onClick={emitirPDF}
+                disabled={!paciente.nome}
+                >
+                Emitir Atestado (PDF)
+            </button>
                 </form>
             </main>
-
+            <div className={styles.fundo}>
             <Copyright />
+            </div>
         </div>
     );
 }
