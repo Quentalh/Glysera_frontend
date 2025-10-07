@@ -6,7 +6,9 @@ import RegisterPage from '../pages/RegisterPage';
 import EquipmentPage from '../pages/EquipmentPage';
 import ObservationPage from "../pages/ObservationPage"
 import QueryPage from "../pages/QueryPage";
+import ManagePage from '../pages/ManagePage';
 import '../styles/Hub.css';
+
 
 function Hub() {
   return (
@@ -27,6 +29,8 @@ function Hub() {
       <Route path="/ObservationPage" element={<ObservationPage/>}/>
 
       <Route path="/QueryPage" element={<QueryPage/>}/>
+
+      <Route path="/ManagePage" element={<ManagePage/>}/>
 
     </Routes>
   
