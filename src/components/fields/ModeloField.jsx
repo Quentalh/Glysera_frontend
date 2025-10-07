@@ -4,7 +4,7 @@ import NumeroInput from "../inputs/ModeloInput";
 function ModeloField(){
     return(
       <div>
-        <label className={styles.textModelo}>Modelo</label>
+        <label className={styles.textModel}>Modelo</label>
         <NumeroInput/>
       </div>
     );

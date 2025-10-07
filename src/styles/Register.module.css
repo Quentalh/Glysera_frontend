@@ -7,6 +7,375 @@
   grid-template-rows: repeat(10, 1fr);
 }
 
+.Tcadastro{
+  color: #344955;
+  font-size: 36px;
+  display: flex;
+  grid-column: 4 / 6;
+}
+
+.Tdados{
+  font-size: 14px;
+  font-weight: 600;
+  color: #344955;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.Lcpf{
+  font-size: 14px;
+  font-weight: 600;
+  color: #4a2b2b;
+  display: block;
+}
+
+.Lnome{
+  font-size: 14px;
+  font-weight: 600;
+  color: #4a2b2b;
+  display: block;
+}
+
+.Lnomesocial{
+  font-size: 14px;
+  font-weight: 600;
+  color: #4a2b2b;
+  display: block; 
+
+}
+
+.Lnomemae{
+  font-size: 14px;
+  font-weight: 600;
+  color: #4a2b2b;
+  display: block;
+}
+
+.Lnascimento{
+  font-size: 14px;
+  font-weight: 600;
+  color: #4a2b2b;
+  display: block;
+}
+.Lsexo{
+  font-size: 14px;
+  font-weight: 600;
+  color: #4a2b2b;
+  display: block;  
+}
+
+.Cardnome {
+  width: 250px;
+  padding: 12px 14px;
+  border: 1px solid #DCE5E3;
+  border-radius: 12px;
+  background: #FFFFFF;
+  color: #1a1f36;
+  font-size: 15px;
+  transition: all 0.2s ease;
+}
+
+.Cardnome:focus{
+  border-color: #3FBFAD; 
+  box-shadow: 0 0 0 4px rgba(63, 191, 173, 0.2); 
+  outline: none;
+}
+
+.Cardnomesocial{
+  width: 250px;
+  padding: 12px 14px;
+  border: 1px solid #DCE5E3;
+  border-radius: 12px;
+  background: #FFFFFF;
+  color: #1a1f36;
+  font-size: 15px;
+  transition: all 0.2s ease;
+}
+
+.Cardnomesocial:focus{
+  border-color: #3FBFAD; 
+  box-shadow: 0 0 0 4px rgba(63, 191, 173, 0.2); 
+  outline: none;
+}
+
+.Cardnomemae{
+  width: 250px;
+  padding: 12px 14px;
+  border: 1px solid #DCE5E3;
+  border-radius: 12px;
+  background: #FFFFFF;
+  color: #1a1f36;
+  font-size: 15px;
+  transition: all 0.2s ease;
+}
+
+.Cardnomemae:focus{
+  border-color: #3FBFAD; 
+  box-shadow: 0 0 0 4px rgba(63, 191, 173, 0.2); 
+  outline: none;
+}
+
+.Cardcpf{
+  width: 250px;
+  padding: 12px 14px;
+  border: 1px solid #DCE5E3;
+  border-radius: 12px;
+  background: #FFFFFF;
+  color: #1a1f36;
+  font-size: 15px;
+  transition: all 0.2s ease;
+}
+
+.Cardcpf:focus{
+  border-color: #3FBFAD; 
+  box-shadow: 0 0 0 4px rgba(63, 191, 173, 0.2); 
+  outline: none;
+}
+
+
+.Cardnascimento {
+  padding: 8px 12px;
+  border: 1px solid #DCE5E3;
+  border-radius: 8px;
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  outline: none;
+  transition: all 0.2s ease-in-out;
+}
+
+.Cardnascimento:focus {
+  border-color: #3FBFAD;
+  box-shadow: 0 0 0 4px rgba(63, 191, 173, 0.2); 
+}
+
+.Campocomseta{
+  position: relative;
+  width: 282px;
+}
+.Cardsexo{
+  display: block;
+  width: 100%;
+  padding: 12px 40px 12px 15px;
+  font-size: 16px;
+  color: #444;
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.Campocomseta::after{
+  content: '';
+  position: absolute;
+  top: 65%; 
+  transform: translateY(-50%);
+  right: 15px; 
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 8px solid #555; 
+  pointer-events: none;
+}
+
+
+.Cardsexo:invalid {
+  color: #888;
+}
+
+.Cardsexo:focus {
+  outline: none;
+  border-color: #3FBFAD;
+  box-shadow: 0 0 0 4px rgba(63, 191, 173, 0.2); 
+}
+
+.Tendereco{
+  font-size: 14px;
+  font-weight: 600;
+  color: #344955;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.Lcep{
+  font-size: 14px;
+  font-weight: 600;
+  color: #4a2b2b;
+  display: block;
+}
+
+.Lrua{
+  font-size: 14px;
+  font-weight: 600;
+  color: #4a2b2b;
+  display: block;
+
+}
+
+.Lcidade{
+  font-size: 14px;
+  font-weight: 600;
+  color: #4a2b2b;
+  display: block;
+
+}
+
+.Lestado{
+  font-size: 14px;
+  font-weight: 600;
+  color: #4a2b2b;
+  display: block;
+}
+
+.Lbairro{
+  font-size: 14px;
+  font-weight: 600;
+  color: #4a2b2b;
+  display: block;
+}
+
+.Lnumero{
+  font-size: 14px;
+  font-weight: 600;
+  color: #4a2b2b;
+  display: block;
+}
+
+.Lcomplemento{
+  font-size: 14px;
+  font-weight: 600;
+  color: #4a2b2b;
+  display: block;
+}
+
+.Cardcep {
+  width: 250px;
+  padding: 12px 14px;
+  border: 1px solid #DCE5E3;
+  border-radius: 12px;
+  background: #FFFFFF;
+  color: #1a1f36;
+  font-size: 15px;
+  transition: all 0.2s ease;
+}
+
+
+.Cardcep:focus{
+  border-color: #3FBFAD; 
+  box-shadow: 0 0 0 4px rgba(63, 191, 173, 0.2); 
+  outline: none;
+}
+
+.Cardrua {
+  width: 250px;
+  padding: 12px 14px;
+  border: 1px solid #DCE5E3;
+  border-radius: 12px;
+  background: #FFFFFF;
+  color: #1a1f36;
+  font-size: 15px;
+  transition: all 0.2s ease;
+}
+
+.Cardrua:focus{
+  border-color: #3FBFAD; 
+  box-shadow: 0 0 0 4px rgba(63, 191, 173, 0.2); 
+  outline: none;
+}
+
+.Cardcidade {
+  width: 250px;
+  padding: 12px 14px;
+  border: 1px solid #DCE5E3;
+  border-radius: 12px;
+  background: #FFFFFF;
+  color: #1a1f36;
+  font-size: 15px;
+  transition: all 0.2s ease;
+}
+
+.Cardcidade:focus{
+  border-color: #3FBFAD; 
+  box-shadow: 0 0 0 4px rgba(63, 191, 173, 0.2); 
+  outline: none;
+}
+
+.Cardestado {
+  width: 250px;
+  padding: 12px 14px;
+  border: 1px solid #DCE5E3;
+  border-radius: 12px;
+  background: #FFFFFF;
+  color: #1a1f36;
+  font-size: 15px;
+  transition: all 0.2s ease;
+}
+
+.Cardestado:focus{
+  border-color: #3FBFAD; 
+  box-shadow: 0 0 0 4px rgba(63, 191, 173, 0.2); 
+  outline: none;
+}
+
+.Cardbairro {
+  width: 250px;
+  padding: 12px 14px;
+  border: 1px solid #DCE5E3;
+  border-radius: 12px;
+  background: #FFFFFF;
+  color: #1a1f36;
+  font-size: 15px;
+  transition: all 0.2s ease;  
+}
+
+.Cardbairro:focus{
+  border-color: #3FBFAD; 
+  box-shadow: 0 0 0 4px rgba(63, 191, 173, 0.2); 
+  outline: none;  
+}
+
+
+.Cardnumero {
+  width: 250px;
+  padding: 12px 14px;
+  border: 1px solid #DCE5E3;
+  border-radius: 12px;
+  background: #FFFFFF;
+  color: #1a1f36;
+  font-size: 15px;
+  transition: all 0.2s ease;
+}
+
+.Cardnumero:focus{
+  border-color: #3FBFAD; 
+  box-shadow: 0 0 0 4px rgba(63, 191, 173, 0.2); 
+  outline: none;
+}
+
+.Cardcomplemento {
+  width: 250px;
+  padding: 12px 14px;
+  border: 1px solid #DCE5E3;
+  border-radius: 12px;
+  background: #FFFFFF;
+  color: #1a1f36;
+  font-size: 15px;
+  transition: all 0.2s ease;
+}
+
+.Cardcomplemento:focus{
+  border-color: #3FBFAD; 
+  box-shadow: 0 0 0 4px rgba(63, 191, 173, 0.2); 
+  outline: none;
+}
+
+
 .btnRegister {
   width: 150px;
   height: 25px;
@@ -17,246 +386,17 @@
   transition: transform 0.3s; 
   color: #2e1c1c;
   background-color: #ff6b35;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.18);
 }
 
 .btnRegister:hover {
-  background-color: #84d8b9; 
   cursor: pointer;
-  transform: scale(1.1);
+  transform: scale(1.05);
+}
+.btnRegister:active {
+    transform: scale(0.98);
 }
 
-.text1{
-  font-size: 14px;
-  font-weight: 600;
-  color: #344955;
-  display: block;
-  margin-bottom: 6px;
-}
-
-.text2{
-  font-size: 14px;
-  font-weight: 600;
-  color: #344955;
-  display: block;
-  margin-bottom: 6px;
-}
-
-.text3{
-  font-size: 14px;
-  font-weight: 600;
-  color: #344955;
-  display: block;
-  margin-bottom: 6px;
-}
-
-.cardNome {
-  width: 250px;
-  padding: 12px 14px;
-  border: 1px solid #DCE5E3;
-  border-radius: 12px;
-  background: #FFFFFF;
-  color: #1a1f36;
-  font-size: 15px;
-  transition: all 0.2s ease;
-}
-
-.cardNome:focus{
-  border-color: #3FBFAD; 
-  box-shadow: 0 0 0 4px rgba(63, 191, 173, 0.2); 
-  outline: none;
-}
-
-.cardNomeSocial{
-  width: 250px;
-  padding: 12px 14px;
-  border: 1px solid #DCE5E3;
-  border-radius: 12px;
-  background: #FFFFFF;
-  color: #1a1f36;
-  font-size: 15px;
-  transition: all 0.2s ease;
-}
-
-.cardNomeSocial:focus{
-  border-color: #3FBFAD; 
-  box-shadow: 0 0 0 4px rgba(63, 191, 173, 0.2); 
-  outline: none;
-}
-
-.cardNomeMae{
-  width: 250px;
-  padding: 12px 14px;
-  border: 1px solid #DCE5E3;
-  border-radius: 12px;
-  background: #FFFFFF;
-  color: #1a1f36;
-  font-size: 15px;
-  transition: all 0.2s ease;
-}
-
-.cardNomeMae:focus{
-  border-color: #3FBFAD; 
-  box-shadow: 0 0 0 4px rgba(63, 191, 173, 0.2); 
-  outline: none;
-}
-
-.cardCep {
-  width: 250px;
-  padding: 12px 14px;
-  border: 1px solid #DCE5E3;
-  border-radius: 12px;
-  background: #FFFFFF;
-  color: #1a1f36;
-  font-size: 15px;
-  transition: all 0.2s ease;
-}
-
-.cardCep:focus{
-  border-color: #3FBFAD; 
-  box-shadow: 0 0 0 4px rgba(63, 191, 173, 0.2); 
-  outline: none;
-}
-
-.cardRua {
-  width: 250px;
-  padding: 12px 14px;
-  border: 1px solid #DCE5E3;
-  border-radius: 12px;
-  background: #FFFFFF;
-  color: #1a1f36;
-  font-size: 15px;
-  transition: all 0.2s ease;
-}
-
-.cardRua:focus{
-  border-color: #3FBFAD; 
-  box-shadow: 0 0 0 4px rgba(63, 191, 173, 0.2); 
-  outline: none;
-}
-
-.cardCidade {
-  width: 250px;
-  padding: 12px 14px;
-  border: 1px solid #DCE5E3;
-  border-radius: 12px;
-  background: #FFFFFF;
-  color: #1a1f36;
-  font-size: 15px;
-  transition: all 0.2s ease;
-}
-
-.cardCidade:focus{
-  border-color: #3FBFAD; 
-  box-shadow: 0 0 0 4px rgba(63, 191, 173, 0.2); 
-  outline: none;
-}
-
-.cardEstado {
-  width: 250px;
-  padding: 12px 14px;
-  border: 1px solid #DCE5E3;
-  border-radius: 12px;
-  background: #FFFFFF;
-  color: #1a1f36;
-  font-size: 15px;
-  transition: all 0.2s ease;
-}
-
-.cardEstado:focus{
-  border-color: #3FBFAD; 
-  box-shadow: 0 0 0 4px rgba(63, 191, 173, 0.2); 
-  outline: none;
-}
-
-.cardNumero {
-  width: 250px;
-  padding: 12px 14px;
-  border: 1px solid #DCE5E3;
-  border-radius: 12px;
-  background: #FFFFFF;
-  color: #1a1f36;
-  font-size: 15px;
-  transition: all 0.2s ease;
-}
-
-.cardNumero:focus{
-  border-color: #3FBFAD; 
-  box-shadow: 0 0 0 4px rgba(63, 191, 173, 0.2); 
-  outline: none;
-}
-
-.cardComplemento {
-  width: 250px;
-  padding: 12px 14px;
-  border: 1px solid #DCE5E3;
-  border-radius: 12px;
-  background: #FFFFFF;
-  color: #1a1f36;
-  font-size: 15px;
-  transition: all 0.2s ease;
-}
-
-.cardComplemento:focus{
-  border-color: #3FBFAD; 
-  box-shadow: 0 0 0 4px rgba(63, 191, 173, 0.2); 
-  outline: none;
-}
-
-.cardMarca {
-  width: 250px;
-  padding: 12px 14px;
-  border: 1px solid #DCE5E3;
-  border-radius: 12px;
-  background: #FFFFFF;
-  color: #1a1f36;
-  font-size: 15px;
-  transition: all 0.2s ease;
-}
-
-.cardMarca:focus{
-  border-color: #3FBFAD; 
-  box-shadow: 0 0 0 4px rgba(63, 191, 173, 0.2); 
-  outline: none;
-}
-
-.cardStatus{
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  font-size: 14px;
-  border-color: #3FBFAD; 
-  background-color: #fff;
-  transition: border 0.3s ease, box-shadow 0.3s ease;
-}
-
-.cardData {
-  padding: 8px 12px;
-  border: 2px solid #4a90e2;
-  border-radius: 8px;
-  font-size: 16px;
-  font-family: Arial, sans-serif;
-  background-color: #f9f9f9;
-  color: #333;
-  outline: none;
-  transition: all 0.2s ease-in-out;
-}
-
-.cardData:focus {
-  border-color: #3FBFAD;
-  box-shadow: 0 0 6px rgba(63, 191, 173, 0.8);
-}
-
-.cardData::-webkit-calendar-picker-indicator {
-  background: url("icone.png") no-repeat center;
-  cursor: pointer;
-  opacity: 0.6;
-  width: 20px;
-  height: 20px;
-}
-
-.cardData::-webkit-calendar-picker-indicator:hover {
-  opacity: 1;
-}
 .registerfooter{
   grid-row: 10/11;
   grid-column: 4/6;
@@ -266,4 +406,7 @@
 .registerform{
   grid-row: 1/11;
   grid-column: 4/6;
+}
+.textStatus{
+  padding-right: 10px;
 }

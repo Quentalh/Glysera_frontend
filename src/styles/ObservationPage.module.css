@@ -22,12 +22,13 @@
   justify-content: space-between;
   align-items: center
 }
-.form{
+.form {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     gap: 15px;
+    width: 100%;
 }
 .fieldContainer {
   display: flex;
@@ -36,18 +37,23 @@
 
 .label {
   font-weight: bold;
-  color: #4a4a4a;
+  color: #4a2b2b;
   width: 200px;
   text-align: right;
+  padding-right: 10px;
 }
 
-.inputField, .textAreaField {
+.inputField, .textAreaField{
   flex-grow: 1;
   padding: 10px;
-  border: none;
-  background-color: #f0e6e6;
   border-radius: 8px;
   font-size: 16px;
+  border: 1px solid #ccc;
+  border-color: #DCE5E3;
+  background-color: #fff;
+  color: #1a1f36;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.18);
 }
 
 .textAreaField {
@@ -55,24 +61,40 @@
 }
 
 .saveButton {
-  background-color: #ff6347;
+  width: 150px;
   border: none;
-  padding: 12px 24px;
-  border-radius: 8px;
-  font-size: 16px;
-  font-weight: bold;
-  cursor: pointer;
-  align-self: center;
   margin-top: 20px;
+  padding: 8px 16px;
+  font-size: 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: transform 0.3s; 
+  color: #2e1c1c;
+  background-color: #ff6b35;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.18);
 }
 
 .saveButton:hover {
-  opacity: 0.9;
+  background-color: #E85A35;
+  cursor: pointer;
+  transform: scale(1.1);
 }
-
+.saveButton:active {
+    transform: scale(0.98);
+}
 
 .uploadContainer {
   flex-grow: 1;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-color: #DCE5E3;
+  background-color: #fff;
+  color: #1a1f36;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.18);
 }
 
 .fileInput {

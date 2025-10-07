@@ -8,7 +8,9 @@ function RegisterPage(){
 
     return(
         <div className={styles.container}>
-          <header></header>
+          <header>
+            <h1 className={styles.Tcadastro}>Cadastro do Paciente</h1>
+          </header>
           <Menu/>
           <main className={styles.registerform}>
             <RegisterForm/>

@@ -1,9 +1,9 @@
-import styles from "../../styles/Login.module.css"
+import styles from "../../../styles/Login.module.css"
 
 function AcessInput(){
     return(
        <input 
-       className={styles.cardAcess}
+       className={styles.Cardacess}
        type="password"
        placeholder="Digite sua Senha"
        />

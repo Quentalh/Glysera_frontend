@@ -1,9 +1,9 @@
-import styles from "../../styles/Login.module.css";
+import styles from "../../../styles/Login.module.css";
 
 function UserInput(){
     return(
       <input 
-      className={styles.cardUser}
+      className={styles.Carduser}
       type="text"
       placeholder="Digite seu CPF"
       />

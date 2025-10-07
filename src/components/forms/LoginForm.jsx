@@ -1,5 +1,5 @@
-import UserField from "../fields/UserField";
-import AcessField from "../fields/AcessField";
+import UserField from "../fields/login/UserField";
+import AcessField from "../fields/login/AcessField";
 
 function LoginForm() {
     return (

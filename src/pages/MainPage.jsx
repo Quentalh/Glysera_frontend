@@ -4,6 +4,7 @@ import Copyright from "../components/items/Footer";
 import Menu from "../components/items/Menu";
 import Dropdown from "../components/items/Dropdown";
 import { naoAtendidasItems, atendidasItems } from "../components/mockdata/mockdata.js";
+import mascote from "../assets/mascot.png"
 
 const natendidafields = [
   { key: "codigo", label: "Código" },
@@ -31,6 +32,9 @@ function MainPage() {
           items={atendidasItems}
           toggleClass="dropdownToggleGreen"
         />
+      </div>
+      <div className={styles.containermascote}>
+        <img src={mascote} alt={"Mascote Glysera"} className={styles.mascote}/>
       </div>
       <footer className={styles.mainfooter}>
         <Copyright />

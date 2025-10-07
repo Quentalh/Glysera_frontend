@@ -12,7 +12,7 @@ function EquipmentPage(){
         <div className={styles.container}>
           <header></header>
           <Menu/>
-          <main className={styles.containercadastro}>
+          <main className={styles.containerform}>
             <EquipmentForm/>
             <div className={styles.containerbtn}>
               <RegisterButton/>
