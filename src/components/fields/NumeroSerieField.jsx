@@ -1,5 +1,5 @@
 import styles from "../../styles/Equipment.module.css";
-import NumeroSerieInput from "../inputs/NumeroSerieinput/";
+import NumeroSerieInput from "../inputs/NumeroSerieInput.jsx";
 
 function NumeroSerieField(){
     return(
