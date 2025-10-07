@@ -17,12 +17,16 @@
   transition: transform 0.3s; 
   color: #2e1c1c;
   background-color: #ff6b35;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.18);
 }
 
 .btnRegister:hover {
-  background-color: #84d8b9; 
+  background-color: #E85A35;
   cursor: pointer;
   transform: scale(1.1);
+}
+.btnRegister:active {
+    transform: scale(0.98);
 }
 
 .text1{
@@ -203,14 +207,15 @@
 }
 
 .cardMarca {
-  width: 250px;
-  padding: 12px 14px;
-  border: 1px solid #DCE5E3;
-  border-radius: 12px;
-  background: #FFFFFF;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+  border-color: #DCE5E3;
+  background-color: #fff;
   color: #1a1f36;
-  font-size: 15px;
-  transition: all 0.2s ease;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.23);
 }
 
 .cardMarca:focus{
@@ -266,4 +271,7 @@
 .registerform{
   grid-row: 1/11;
   grid-column: 4/6;
+}
+.textStatus{
+  padding-right: 10px;
 }

@@ -6,17 +6,17 @@ import styles from "../../styles/Equipment.module.css"
 
 function EquipmentForm(){
     return(
-    <div className={styles.containerform}>
-        <div className={styles.containernmrserie}>
+    <div  className={styles.containercadastro}>
+        <div className={styles.containerNumeroserie}>
             <NumeroSerieField/>
         </div>
-        <div className={styles.containermarca}>
+        <div className={styles.containerMarca}>
             <MarcaField/>
         </div>
-        <div className={styles.containermodelo}>
+        <div className={styles.containerModel}>
             <ModeloField/>
         </div>
-        <div className={styles.containerstatus}>
+        <div className={styles.containerStatus}>
             <StatusField/>
         </div>
     </div>

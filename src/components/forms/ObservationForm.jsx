@@ -4,7 +4,7 @@ import ObservationDateField from "../fields/ObservationDateField";
 import ObservationTextField from "../fields/ObservationTextField";
 import AttachmentField from "../fields/AttachmentField";
 
-function ObservationForm() {
+function ObsForm() {
   return (
     <form className={styles.form}>
       <EquipmentField />
@@ -15,4 +15,4 @@ function ObservationForm() {
   );
 }
 
-export default ObservationForm;
+export default ObsForm;

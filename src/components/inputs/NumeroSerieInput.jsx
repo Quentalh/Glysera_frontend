@@ -4,7 +4,7 @@ function NumeroSerieInput(){
     return(
         <input className={styles.Numeroserieinput}
         type="text"
-        placeholder="Digite o número de série do glicosímetro">
+        placeholder="Digite o número de série">
         </input>
     );
 }
