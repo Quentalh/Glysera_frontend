@@ -7,14 +7,14 @@
   height: auto;
 }
 
-.title{
+.Tpainel{
   margin-bottom: 25px;
   color: #344955;
   font-size: 24px;
 }
 
-.textUser {
-   font-size: 14px;
+.Tuser {
+  font-size: 14px;
   font-weight: 600;
   color: #4a2b2b;
   display: block;
@@ -22,15 +22,15 @@
  
 }
 
-.textAcess {
-   font-size: 14px;
+.Tacess {
+  font-size: 14px;
   font-weight: 600;
   color: #4a2b2b;
   display: block;
   margin-bottom: 6px;
 }
 
-.cardUser{
+.Carduser{
   width: 250px;
   padding: 12px 14px;
   border: 1px solid #DCE5E3;
@@ -42,13 +42,13 @@
 
 }
 
-.cardUser:focus {
+.Carduser:focus {
   border-color: #b0e5f0; 
   box-shadow: 0 0 0 4px rgba(63, 191, 173, 0.2); 
   outline: none;
 }
 
-.cardAcess{
+.Cardacess{
    width: 250px;
   padding: 12px 14px;
   border: 1px solid #DCE5E3;
@@ -59,7 +59,7 @@
   transition: all 0.2s ease;
 }
 
-.cardAcess:focus {
+.Cardacess:focus {
   border-color: #b0e5f0; 
   box-shadow: 0 0 0 4px rgba(63, 191, 173, 0.2); 
   outline: none;

@@ -1,30 +1,38 @@
-import NomeField from "../fields/NomeField";
-import NomeSocial from "../fields/NomeSocialField";
-import NomeMae from "../fields/NomeMaeField";
-import CepField from "../fields/CepField";
-import RuaField from "../fields/RuaField";
-import CidadeField from "../fields/CidadeField";
-import EstadoField from "../fields/EstadoField";
-import NumeroField from "../fields/NumeroField";
-import ComplementoField from "../fields/ComplementoField";
+import FullNameField from "../fields/pacient/FullNameField";
+import PreferredNameField from "../fields/pacient/PreferredNameField";
+import MotherNameField from "../fields/pacient/MotherNameField";
+import CpfField from "../fields/pacient/CpfField";
+import DateOfBirthField from "../fields/pacient/DateOfBirthField";
+import GenderField from "../fields/pacient/GenderField";
+import PostalCodeField from "../fields/address/PostalCodeField";
+import StreetField from "../fields/address/StreetField";
+import CityField from "../fields/address/CityField";
+import StateField from "../fields/address/StateField";
+import NeighborhoodField from "../fields/address/NeighborhoodField";
+import HouseNumberField from "../fields/address/HouseNumberField";
+import AddressLine2Field from "../fields/address/AddressLine2Field";
 import styles from "../../styles/Register.module.css";
 
 
 function RegisterForm(){
     return(
       <div>
-        <label className={styles.text1}>Dados</label>
-        <NomeField/>
-        <NomeSocial/>
-        <NomeMae/>
+        <label className={styles.Tdados}>Dados</label>
+        <FullNameField/>
+        <PreferredNameField/>
+        <MotherNameField/>
+        <CpfField/>
+        <DateOfBirthField/>
+        <GenderField/>
 
-        <label className={styles.text2}>Endereço</label>
-        <CepField/>
-        <RuaField/>
-        <CidadeField/>
-        <EstadoField/>
-        <NumeroField/>
-        <ComplementoField/>
+        <label className={styles.Tendereco}>Endereço</label>
+        <PostalCodeField/>
+        <StreetField/>
+        <CityField/>
+        <StateField/>
+        <NeighborhoodField/>
+        <HouseNumberField/>
+        <AddressLine2Field/>
       </div>
     );
 }

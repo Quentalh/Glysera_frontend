@@ -3,7 +3,7 @@
   grid-template-rows: repeat(8,1fr);
   grid-template-columns: repeat(6,1fr);
   height: 100vh;
-  background-image: url('../assets/icon_background.png');
+  background-image: url('../assets/drop.png');
   background-size: 600px;
   background-repeat: no-repeat;
   background-position: center;
