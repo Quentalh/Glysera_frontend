@@ -1,6 +1,5 @@
 import { useState } from "react";
 import styles from "../../styles/Register.module.css";
-
 import NomeField from "../fields/NomeField";
 import NomeSocialField from "../fields/NomeSocialField";
 import NomeMaeField from "../fields/NomeMaeField";
