@@ -386,12 +386,15 @@
   transition: transform 0.3s; 
   color: #2e1c1c;
   background-color: #ff6b35;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.18);
 }
 
 .btnRegister:hover {
-  background-color: #E85A29; 
   cursor: pointer;
   transform: scale(1.05);
+}
+.btnRegister:active {
+    transform: scale(0.98);
 }
 
 .registerfooter{
@@ -403,4 +406,7 @@
 .registerform{
   grid-row: 1/11;
   grid-column: 4/6;
+}
+.textStatus{
+  padding-right: 10px;
 }
