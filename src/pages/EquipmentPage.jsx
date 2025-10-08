@@ -2,7 +2,6 @@ import Menu from "../components/items/Menu";
 import styles from "../styles/Equipment.module.css";
 import EquipmentForm from "../components/forms/EquipmentForm";
 import ObsButton from "../components/buttons/ObsButton"
-import RegisterButton from "../components/buttons/RegisterButton";
 import Copyright from "../components/items/Footer"
 import {Link} from "react-router-dom"
 
@@ -14,9 +13,6 @@ function EquipmentPage(){
           <Menu/>
           <main className={styles.containercadastro}>
             <EquipmentForm/>
-            <div className={styles.containerbtn}>
-              <RegisterButton/>
-            </div>
           </main>
           <div className={styles.containerobs}>
             <Link to="/ObservationPage">
@@ -28,7 +24,6 @@ function EquipmentPage(){
           </footer>
         </div>
     ); 
-
 }
 
 export default EquipmentPage;

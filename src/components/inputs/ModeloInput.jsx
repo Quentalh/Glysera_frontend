@@ -1,11 +1,15 @@
-import styles from "../../styles/Equipment.Module.css"
+import styles from "../../styles/Equipment.module.css";
 
-function ModuleInput(){
+function ModeloInput({ name, value, onChange }){
     return(
-        <input className={styles.ModuleInput}
-        type="text"
-        placeholder="Digite o modelo do glicosímetro">
-        </input>
+        <input 
+            className={styles.ModuleInput}
+            type="text"
+            placeholder="Digite o modelo do glicosímetro"
+            name={name}
+            value={value}
+            onChange={onChange}
+        />
     );
 }
-export default ModuleInput;
+export default ModeloInput;

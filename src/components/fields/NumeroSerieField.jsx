@@ -1,11 +1,11 @@
 import styles from "../../styles/Equipment.module.css";
-import NumeroSerieInput from "../inputs/NumeroSerieinput/";
+import NumeroSerieInput from "../inputs/NumeroSerieInput";
 
-function NumeroSerieField(){
+function NumeroSerieField({ name, value, onChange }){ // Accept props
     return(
       <div>
         <label className={styles.textNumeroSerie}>Número de série</label>
-        <NumeroSerieInput/>
+        <NumeroSerieInput name={name} value={value} onChange={onChange} /> 
       </div>
     );
 }

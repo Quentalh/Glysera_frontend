@@ -1,11 +1,11 @@
 import styles from "../../styles/Equipment.module.css";
 import MarcaInput from "../inputs/MarcaInput"
 
-function MarcaField(){
+function MarcaField({ name, value, onChange }){ // Accept props
     return(
       <div>
         <label className={styles.textMarca}>Marca</label>
-        <MarcaInput/>
+        <MarcaInput name={name} value={value} onChange={onChange} />
       </div>
     );
 }
