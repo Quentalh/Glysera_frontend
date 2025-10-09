@@ -193,3 +193,13 @@
   font-weight: bold;
   cursor: pointer;
 }
+.clearButton {
+  margin-top: 1rem;
+  background-color: #6c757d;
+  color: white;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}

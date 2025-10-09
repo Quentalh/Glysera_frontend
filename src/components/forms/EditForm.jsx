@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import styles from '../../styles/Edit.module.css';
 import { useNavigate } from 'react-router-dom';
-import ConfirmationModal from '../items/Confirmationmodal';
+import ConfirmationModal from '../items/ConfirmationModal';
 function EditForm({ pacienteData }) {
   const navigate = useNavigate();
 
