@@ -9,19 +9,18 @@ import Menu from "../components/items/Menu";
 function QueryPage() {
   const [searchStatus, setSearchStatus] = useState('idle');
   const [paciente, setPaciente] = useState(null);
-  const [equipamento, setEquipamento] = useState(null);
+  const [equipamentos, setEquipamentos] = useState([]); 
   const [message, setMessage] = useState('');
 
   const handleSearchResult = (result) => {
     setSearchStatus(result.status);
     if (result.status === 'found') {
       setPaciente(result.data.paciente);
-      setEquipamento(result.data.equipamento);
+      setEquipamentos(result.data.equipamentos || []); 
       setMessage('');
     } else {
-      
       setPaciente(null);
-      setEquipamento(null);
+      setEquipamentos([]);
       setMessage(result.message || 'Ocorreu um erro.');
     }
   };
@@ -53,7 +52,7 @@ function QueryPage() {
             {searchStatus === 'found' && paciente && (
               <div className={styles.resultsRow}>
                 <span className={styles.column}>
-                  {equipamento ? (equipamento.nome_do_equipamento || 'Não informado') : 'Nenhum'}
+                  {equipamentos.length > 0 ? equipamentos[0].modelo : 'Nenhum'}
                 </span>
                 <span className={styles.column}>{paciente.nome}</span>
                 <span className={styles.column}>

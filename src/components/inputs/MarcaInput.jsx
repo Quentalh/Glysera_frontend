@@ -1,9 +1,9 @@
-import styles from "../../styles/Register.module.css";
+import styles from "../../styles/Equipment.module.css";
 
 function MarcaInput({ name, value, onChange }){
   return(
     <input  
-        className={styles.cardMarca} 
+        className={styles.Marcainput} 
         type="text" 
         placeholder="Digite a marca do glicosimetro"
         name={name}

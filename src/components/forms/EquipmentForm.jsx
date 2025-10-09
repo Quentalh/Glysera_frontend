@@ -1,4 +1,3 @@
-// src/components/forms/EquipmentForm.jsx
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styles from "../../styles/Equipment.module.css";
@@ -27,7 +26,7 @@ function EquipmentForm() {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-    
+
         const submissionData = {
             equipamento: {
                 numero_de_serie: formData.numero_de_serie,
@@ -61,16 +60,12 @@ function EquipmentForm() {
         }
     };
 
-
     return (
         <form onSubmit={handleSubmit} className={styles.containerform}>
             <NumeroSerieField name="numero_de_serie" value={formData.numero_de_serie} onChange={handleChange} />
             <MarcaField name="marca" value={formData.marca} onChange={handleChange} />
             <ModeloField name="modelo" value={formData.modelo} onChange={handleChange} />
             <StatusField name="status" value={formData.status} onChange={handleChange} />
-            
-
-
             <div className={styles.containerbtn}>
               <RegisterButton />
             </div>

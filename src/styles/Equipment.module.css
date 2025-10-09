@@ -19,7 +19,7 @@
   grid-template-columns: repeat(2,1fr);
   align-items: center;
   grid-row: 3/8;
-  grid-column: 4/6; 
+  grid-column: 4/6;
 }
 .containerform{
   width: 100%;
@@ -46,7 +46,33 @@
   border-radius: 6px;
   cursor: pointer;
   font-weight: bold;
-  transition: transform 0.3s; 
+  transition: transform 0.3s;
   color: #2e1c1c;
   background-color: #ff6b35;
+}
+
+.textNumeroSerie, .textMarca, .textModelo {
+  font-size: 14px;
+  font-weight: 600;
+  color: #344955;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.Numeroserieinput, .ModuleInput, .Marcainput {
+  width: 250px;
+  padding: 12px 14px;
+  border: 1px solid #DCE5E3;
+  border-radius: 12px;
+  background: #FFFFFF;
+  color: #1a1f36;
+  font-size: 15px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+  transition: all 0.2s ease;
+}
+
+.Numeroserieinput:focus, .ModuleInput:focus, .Marcainput:focus {
+  border-color: #3FBFAD;
+  box-shadow: 0 0 0 4px rgba(63, 191, 173, 0.2);
+  outline: none;
 }

@@ -1,18 +1,17 @@
-// src/pages/ObservationPage.jsx
 import { useLocation, Link } from "react-router-dom";
-import styles from "../styles/ObservationPage.module.css"
+import styles from "../styles/ObservationPage.module.css";
 import Menu from "../components/items/Menu";
-import ObservationForm from "../components/forms/ObservationForm"
-import Copyright from "../components/items/Footer"
+import ObservationForm from "../components/forms/ObservationForm";
+import Copyright from "../components/items/Footer";
 
-function ObsPage(){
+function ObsPage() {
     const location = useLocation();
     const equipmentId = location.state?.equipmentId;
 
-    return(
+    return (
         <div className={styles.container}>
             <header></header>
-            <Menu/>
+            <Menu />
             <main className={styles.obsform}>
                 {equipmentId ? (
                     <ObservationForm equipmentId={equipmentId} />
@@ -23,10 +22,11 @@ function ObsPage(){
                     </div>
                 )}
             </main>
-            <div className={styles.containerfooter}>
-                <Copyright/>
-            </div>
+            <footer className={styles.containerfooter}>
+                <Copyright />
+            </footer>
         </div>
     );
 };
+
 export default ObsPage;

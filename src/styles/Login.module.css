@@ -1,4 +1,4 @@
-.Login {
+.container{
   display: grid;
   grid-template-columns: repeat(8, 1fr);
   grid-template-rows: repeat(8, 1fr);
@@ -9,7 +9,82 @@
   border: 0;
   padding: 0;
 }
-.botao{
+
+.logo{
+  width: 600px;
+  height: auto;
+  grid-column: 4/6;
+  grid-row: 1/2;
+}
+
+.title{
+  margin-bottom: 25px;
+  color: #344955;
+  font-size: 24px;
+  grid-column:4/6;
+  grid-row:2/3;
+}
+.LoginForm{
+  grid-column: 4/6;
+  grid-row: 3/4;
+}
+a{
+  grid-column: 4/6;
+  grid-row: 5/6;
+}
+.textUser {
+   font-size: 14px;
+  font-weight: 600;
+  color: #344955;
+  display: block;
+  margin-bottom: 6px;
+ 
+}
+
+.textAcess {
+   font-size: 14px;
+  font-weight: 600;
+  color: #344955;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.cardUser{
+  width: 250px;
+  padding: 12px 14px;
+  border: 1px solid #DCE5E3;
+  border-radius: 12px;
+  background: #FFFFFF;
+  color: #1a1f36;
+  font-size: 15px;
+  transition: all 0.2s ease;
+
+}
+
+.cardUser:focus {
+  border-color: #3FBFAD; 
+  box-shadow: 0 0 0 4px rgba(63, 191, 173, 0.2); 
+  outline: none;
+}
+
+.cardAcess{
+   width: 250px;
+  padding: 12px 14px;
+  border: 1px solid #DCE5E3;
+  border-radius: 12px;
+  background: #FFFFFF;
+  color: #1a1f36;
+  font-size: 15px;
+  transition: all 0.2s ease;
+}
+
+.cardAcess:focus {
+  border-color: #3FBFAD; 
+  box-shadow: 0 0 0 4px rgba(63, 191, 173, 0.2); 
+  outline: none;
+}
+
+.btnLogin {
   width: 150px;
   height: 25px;
   border: none;
@@ -25,81 +100,4 @@
   background-color: #84d8b9; 
   cursor: pointer;
   transform: scale(1.1);
-}
-a{
-  grid-column:4/6;
-  grid-row:5/6;
-}
-h2{
-  grid-column:4/6;
-  grid-row:2/3;
-}
-.titulo{
-  margin-bottom: 25px;
-  color: #344955;
-  font-size: 24px;
-}
-
-.logo{
-  width: 600px;
-  height: auto;
-  grid-column: 4/6;
-  grid-row: 1/2;
-}
-
-.formSenha{
-   width: 250px;
-  padding: 12px 14px;
-  border: 1px solid #DCE5E3;
-  border-radius: 12px;
-  background: #FFFFFF;
-  color: #1a1f36;
-  font-size: 15px;
-  transition: all 0.2s ease;
-
-}
-
-.formSenha:focus {
-  border-color: #3FBFAD; 
-  box-shadow: 0 0 0 4px rgba(63, 191, 173, 0.2); 
-  outline: none;
-}
-
-.formCPF{
-   width: 250px;
-  padding: 12px 14px;
-  border: 1px solid #DCE5E3;
-  border-radius: 12px;
-  background: #FFFFFF;
-  color: #1a1f36;
-  font-size: 15px;
-  transition: all 0.2s ease;
-}
-
-.formCPF:focus {
-  border-color: #3FBFAD; 
-  box-shadow: 0 0 0 4px rgba(63, 191, 173, 0.2); 
-  outline: none;
-}
-
-.fieldCPF{
-   font-size: 14px;
-  font-weight: 600;
-  color: #344955;
-  display: block;
-  margin-bottom: 6px;
-  grid-column: 4/6;
-  grid-row: 3/4;
-  padding-left: 20.5px;
-}
-
-.fieldSenha{
-   font-size: 14px;
-  font-weight: 600;
-  color: #344955;
-  display: block;
-  margin-bottom: 6px;
-  grid-column: 4/6;
-  grid-row: 4/5;
-
 }

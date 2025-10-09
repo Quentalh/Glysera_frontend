@@ -1,4 +1,3 @@
-
 import styles from "../styles/Main.module.css";
 import Copyright from "../components/items/Footer";
 import Menu from "../components/items/Menu";
