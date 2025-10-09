@@ -1,116 +1,132 @@
+
+import { useState } from "react";
 import styles from "../styles/ManagePage.module.css";
 import Menu from "../components/items/Menu";
 import Copyright from "../components/items/Footer";
-import { useState } from "react";
-import jsPDF from "jspdf";
-import AtestadoTexto from "../components/AtestadoTexto/AtestadoTexto";
 
 function ManagePage() {
-    const [cpfInput, setCpfInput] = useState(''); 
-    const [paciente, setPaciente] = useState({
-        nome: "", unidadeSaude: "", cep: "", rua: '',
-        bairro: '', estado: '', cidade: '', numero: '',
-        complemento: '',
-    });
+  const [cpfInput, setCpfInput] = useState("");
+  const [paciente, setPaciente] = useState(null);
+  const [loading, setLoading] = useState(false);
+  const [mensagem, setMensagem] = useState("");
 
-    const [loading, setLoading] = useState(false);
-    const [error, setError] = useState(null);
+  const handleBuscarPaciente = async () => {
+    if (cpfInput.length !== 11) {
+      setMensagem("CPF inválido. Digite os 11 dígitos sem pontos ou traços.");
+      return;
+    }
 
-    const handleBuscarPaciente = async () => {
-        if (cpfInput.length !== 11) {
-            setError('CPF inválido. Digite os 11 dígitos.');
-            return;
-        }
+    setLoading(true);
+    setMensagem("");
+    try {
+      const response = await fetch(`http://localhost:3000/pacientes/${cpfInput}`);
+      if (!response.ok) throw new Error("Paciente não encontrado.");
+      const data = await response.json();
+      setPaciente(data);
+      setMensagem("Paciente encontrado!");
+    } catch (error) {
+      console.error(error);
+      setPaciente(null);
+      setMensagem("Erro ao buscar paciente. Verifique o CPF e tente novamente.");
+    } finally {
+      setLoading(false);
+    }
+  };
 
-        setLoading(true);
-        setError(null);
-        try {
-            const response = await fetch(`https://sua-api.com/pacientes/${cpfInput}`);
-            
-            if (!response.ok) {
-                throw new Error('Sem resposta da rede');
-            }
 
-            const data = await response.json();
-            setPaciente(data);
+  const emitirPDF = async (e) => {
+    e.preventDefault();
+    if (!paciente) {
+      setMensagem("Busque um paciente antes de emitir o formulário.");
+      return;
+    }
 
-        } catch (err) {
-            setPaciente({ 
-                nome: '', unidadeSaude: '', cep: '', rua: '', 
-                bairro: '', estado: '', cidade: '', numero: '', 
-                complemento: '' 
-            });
-            setError('Paciente não encontrado ou erro na comunicação com o servidor.');
-            console.error("Erro ao buscar paciente:", err);
-        } finally {
-            setLoading(false);
-        }
-    };
-            const emitirPDF = () => {
-        if (!paciente.nome) {
-            alert("Busque um paciente antes de emitir o atestado.");
-            return;
-        }
+    setLoading(true);
+    setMensagem("Gerando PDF...");
 
-        const doc = new jsPDF({
-            orientation: "portrait",
-            unit: "mm",
-            format: "a4",
-        });
+    try {
+      const response = await fetch("http://localhost:3000/emissao_formulario", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          paciente_id: paciente.id,
+        }),
+      });
 
-        doc.setFont("helvetica", "bold");
-        doc.setFontSize(16);
-        doc.text("ATESTADO DE RECEBIMENTO", 105, 30, { align: "center" });
+      if (!response.ok) {
+        const errorJson = await response.json();
+        throw new Error(errorJson?.error || "Erro ao emitir formulário.");
+      }
 
-        
-        const texto = AtestadoTexto({ paciente, cpf: cpfInput });
+      
+      const blob = await response.blob();
+      const url = window.URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = "formulario.pdf";
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      window.URL.revokeObjectURL(url);
 
-        doc.setFont("helvetica", "normal");
-        doc.setFontSize(12);
-        const lines = doc.splitTextToSize(texto, 170);
-        doc.text(lines, 20, 50);
+      setMensagem("Formulário emitido com sucesso! O download foi iniciado.");
+    } catch (error) {
+      console.error(error);
+      setMensagem(error.message || "Erro ao emitir formulário.");
+    } finally {
+      setLoading(false);
+    }
+  };
 
-        doc.save(`Atestado_${paciente.nome}.pdf`);
-        };
+  return (
+    <div className={styles.container}>
+      <Menu />
+      <main className={styles.Principal}>
+        <h1 className={styles.titulo}>Emissão de Formulário por CPF</h1>
 
-    return (
-        <div className={styles.container}>
-            <Menu />
-            
-            <main className={styles.Principal}>
-                <h1 className={styles.titulo}>Busca de Paciente</h1>
-                <div className={styles.searchBox}>
-                    <input 
-                        type="text"
-                        value={cpfInput}
-                        onChange={(e) => setCpfInput(e.target.value.replace(/\D/g, ''))}
-                        placeholder="Digite o CPF (somente números)"
-                        maxLength="11"
-                    />
-                    <button onClick={handleBuscarPaciente} disabled={loading}>
-                        {loading ? 'Buscando...' : 'Buscar'}
-                    </button>
-                </div>
-
-                {error && <p className={styles.error}>{error}</p>}
-
-                <form>
-                    <input type="text" value={paciente.nome} placeholder="Nome do Paciente" readOnly />
-                    <input type="text" value={paciente.unidadeSaude} placeholder="Unidade de Saúde" readOnly />
-                    {/* Formulário*/}
-                    <button
-                className={styles.emitirBtn}
-                onClick={emitirPDF}
-                disabled={!paciente.nome}
-                >
-                Emitir Atestado (PDF)
-            </button>
-                </form>
-            </main>
-            <div className={styles.fundo}>
-            <Copyright />
-            </div>
+ 
+        <div className={styles.searchBox}>
+          <input
+            type="text"
+            value={cpfInput}
+            onChange={(e) => setCpfInput(e.target.value.replace(/\D/g, ""))}
+            placeholder="Digite o CPF (somente números)"
+            maxLength="11"
+          />
+          <button onClick={handleBuscarPaciente} disabled={loading}>
+            {loading ? "Buscando..." : "Buscar"}
+          </button>
         </div>
-    );
+
+        {mensagem && <p className={styles.message}>{mensagem}</p>}
+
+       
+        {paciente && (
+          <div className={styles.resultado}>
+            <h2 className={styles.nomePaciente}>Paciente: {paciente.nome}</h2>
+
+            <form onSubmit={emitirPDF} className={styles.form}>
+              <input type="text" value={paciente.nome || ""} readOnly />
+              <input type="text" value={paciente.cpf || ""} readOnly />
+              <input type="text" value={paciente.unidadeSaude || ""} readOnly />
+
+              <button
+                type="submit"
+                className={styles.emitirBtn}
+                disabled={loading}
+              >
+                {loading ? "Emitindo..." : "Emitir PDF"}
+              </button>
+            </form>
+          </div>
+        )}
+      </main>
+
+      <div className={styles.fundo}>
+        <Copyright />
+      </div>
+    </div>
+  );
 }
+
 export default ManagePage;
