@@ -1,3 +1,4 @@
+// src/pages/EquipmentPage.jsx
 import Menu from "../components/items/Menu";
 import styles from "../styles/Equipment.module.css";
 import EquipmentForm from "../components/forms/EquipmentForm";

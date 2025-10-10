@@ -1,3 +1,4 @@
+// src/components/forms/EquipmentForm.jsx
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styles from "../../styles/Equipment.module.css";
@@ -8,7 +9,6 @@ import StatusField from "../fields/StatusField";
 import RegisterButton from '../buttons/RegisterButton';
 
 function EquipmentForm() {
-    const navigate = useNavigate();
     const [formData, setFormData] = useState({
         numero_de_serie: '',
         modelo: '',
@@ -50,8 +50,14 @@ function EquipmentForm() {
             const result = await response.json();
 
             if (response.ok) {
-                alert('Equipamento cadastrado com sucesso! Agora, adicione a observação inicial.');
-                navigate('/ObservationPage', { state: { equipmentId: result.data.id } });
+                alert('Equipamento cadastrado com sucesso!');
+                // Limpa o formulário para um novo cadastro
+                setFormData({
+                    numero_de_serie: '',
+                    modelo: '',
+                    marca: '',
+                    status: '',
+                });
             } else {
                 alert('Erro no cadastro: ' + (result.errors ? result.errors.join(', ') : 'Erro desconhecido'));
             }

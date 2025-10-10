@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import styles from '../../styles/Query.module.css'
+import styles from '../../styles/PatientQuery.module.css'
 
 function ConsultasForm({ onSearchComplete }) {
   const [cpf, setCpf] = useState('');

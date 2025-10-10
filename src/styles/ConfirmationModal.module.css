@@ -1,3 +1,4 @@
+/* src/styles/ConfirmationModal.module.css */
 .modalOverlay {
   position: fixed;
   top: 0;
@@ -48,6 +49,11 @@
 
 .btnConfirm {
   background-color: #28a745;
+  color: white;
+}
+
+.btnConfirmDelete {
+  background-color: #dc3545; /* Cor vermelha para confirmação de deleção */
   color: white;
 }
 

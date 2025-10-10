@@ -6,8 +6,12 @@ import styles from '../styles/Manage.module.css';
 function ManagePage() {
   const [pacientes, setPacientes] = useState([]);
   const [equipamentos, setEquipamentos] = useState([]);
+  const [unidadesDeSaude, setUnidadesDeSaude] = useState([]); // Novo estado para unidades
+  
   const [selectedPacienteId, setSelectedPacienteId] = useState('');
   const [selectedEquipamentoId, setSelectedEquipamentoId] = useState('');
+  const [selectedUnidadeId, setSelectedUnidadeId] = useState(''); // Novo estado para unidade selecionada
+
   const [isLoading, setIsLoading] = useState(false);
   const [message, setMessage] = useState('');
 
@@ -23,6 +27,12 @@ function ManagePage() {
       .then(res => res.json())
       .then(data => setEquipamentos(data.data))
       .catch(() => setMessage('Erro ao carregar equipamentos.'));
+
+    // Fetch Unidades de Saude
+    fetch('http://localhost:3000/unidade_de_saudes') // Nova chamada à API
+      .then(res => res.json())
+      .then(data => setUnidadesDeSaude(data.data))
+      .catch(() => setMessage('Erro ao carregar Unidades de Saúde.'));
   }, []);
 
   const handleSubmit = async (e) => {
@@ -39,13 +49,13 @@ function ManagePage() {
         body: JSON.stringify({
           paciente_id: selectedPacienteId,
           equipamento_id: selectedEquipamentoId,
+          unidade_de_saude_id: selectedUnidadeId, // Adiciona o ID da unidade ao corpo da requisição
         }),
       });
 
       if (response.ok) {
         setMessage('Formulário gerado com sucesso! O download iniciará em breve.');
 
-        // Handle the file download
         const blob = await response.blob();
         const url = window.URL.createObjectURL(blob);
         const a = document.createElement('a');
@@ -77,7 +87,7 @@ function ManagePage() {
     }
   };
 
-  const isButtonDisabled = !selectedPacienteId || !selectedEquipamentoId || isLoading;
+  const isButtonDisabled = !selectedPacienteId || !selectedEquipamentoId || !selectedUnidadeId || isLoading;
 
   return (
     <div className={styles.container}>
@@ -114,6 +124,23 @@ function ManagePage() {
               {equipamentos.map((eq) => (
                 <option key={eq.id} value={eq.id}>
                   {eq.numero_de_serie} ({eq.modelo})
+                </option>
+              ))}
+            </select>
+          </div>
+          
+          <div className={styles.dropdownContainer}>
+            <label htmlFor="unidade" className={styles.label}>Unidade de Saúde</label>
+            <select
+              id="unidade"
+              className={styles.select}
+              value={selectedUnidadeId}
+              onChange={(e) => setSelectedUnidadeId(e.target.value)}
+            >
+              <option value="">Selecione a Unidade</option>
+              {unidadesDeSaude.map((us) => (
+                <option key={us.id} value={us.id}>
+                  {us.nome}
                 </option>
               ))}
             </select>

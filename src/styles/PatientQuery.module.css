@@ -1,3 +1,4 @@
+/* src/styles/PatientQuery.module.css */
 .container {
   height: 100vh;
   margin: 0;
@@ -176,23 +177,6 @@
   font-weight: bold;
   margin-top: 1rem;
 }
-.actionsContainer {
-  width: 100%;
-  max-width: 850px;
-  display: flex;
-  justify-content: flex-end;
-  margin-top: 1rem;
-}
-
-.editarButton {
-  background-color: #ff6b35;
-  color: white;
-  border: none;
-  padding: 10px 25px;
-  border-radius: 8px;
-  font-weight: bold;
-  cursor: pointer;
-}
 .clearButton {
   margin-top: 1rem;
   background-color: #6c757d;
@@ -202,4 +186,28 @@
   border-radius: 8px;
   font-weight: bold;
   cursor: pointer;
+}
+
+/* --- ESTILOS CORRIGIDOS E UNIFICADOS --- */
+.actionsContainer {
+  width: 100%;
+  max-width: 850px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem; /* Adicionado para espaçamento */
+  margin-top: 1rem;
+}
+
+.editarButton, .removerButton {
+  background-color: #ff6b35;
+  color: white;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.removerButton {
+  background-color: #dc3545; /* Cor vermelha para o botão de remover */
 }

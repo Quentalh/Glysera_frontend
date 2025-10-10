@@ -1,16 +1,19 @@
-// src/pages/QueryPage.jsx
+// src/pages/PatientQueryPage.jsx
 import React, { useState, useEffect } from "react";
-import { Link } from 'react-router-dom';
-import ConsultasForm from "../components/forms/QueryForm";
-import styles from "../styles/Query.module.css";
+import { Link, useNavigate } from 'react-router-dom';
+import ConsultasForm from "../components/forms/PatientQueryForm";
+import styles from "../styles/PatientQuery.module.css";
 import Copyright from "../components/items/Footer";
 import Menu from "../components/items/Menu";
+import ConfirmationModal from "../components/items/ConfirmationModal";
 
-function QueryPage() {
+function PatientQueryPage() {
   const [allPatients, setAllPatients] = useState([]);
   const [displayPatients, setDisplayPatients] = useState([]);
   const [searchStatus, setSearchStatus] = useState('idle');
   const [message, setMessage] = useState('');
+  const [patientToDelete, setPatientToDelete] = useState(null);
+  const navigate = useNavigate();
 
   const fetchAllPatients = async () => {
     try {
@@ -53,13 +56,50 @@ function QueryPage() {
     setMessage('');
   };
 
+  const handleDeleteClick = (paciente) => {
+    setPatientToDelete(paciente);
+  };
+
+  const confirmDelete = async () => {
+    if (!patientToDelete) return;
+    try {
+      const response = await fetch(`http://localhost:3000/pacientes/${patientToDelete.id}`, {
+        method: 'DELETE',
+      });
+      if (response.ok) {
+        alert("Paciente removido com sucesso!");
+        setPatientToDelete(null);
+        fetchAllPatients(); // Recarrega a lista
+      } else {
+        alert("Erro ao remover o paciente.");
+      }
+    } catch (error) {
+      alert("Falha na comunicação com o servidor.");
+    }
+  };
+
+  const cancelDelete = () => {
+    setPatientToDelete(null);
+  };
+
   return (
     <div className={styles.container}>
-      <header className={styles.containerheader}>
-        <h1>Consulta de Pacientes</h1>
-      </header>
-      <Menu/>
+      {patientToDelete && (
+        <ConfirmationModal
+          message={`Tem certeza que deseja remover o paciente ${patientToDelete.nome}?`}
+          onConfirm={confirmDelete}
+          onCancel={cancelDelete}
+          confirmButtonClass="btnConfirmDelete"
+        />
+      )}
+      <Menu />
       <main className={styles.containerform}>
+        <div className={styles.header}>
+          <button onClick={() => navigate('/QueryPage')} className={styles.backButton}>
+            &lt; VOLTAR
+          </button>
+          <h1>Consulta de Pacientes</h1>
+        </div>
         <ConsultasForm onSearchComplete={handleSearchResult} />
         <button onClick={handleClearSearch} className={styles.clearButton}>
           Mostrar Todos
@@ -70,6 +110,9 @@ function QueryPage() {
             <Link to="/EditPage" state={{ paciente: displayPatients[0] }}>
               <button className={styles.editarButton}>EDITAR</button>
             </Link>
+            <button onClick={() => handleDeleteClick(displayPatients[0])} className={styles.removerButton}>
+              REMOVER
+            </button>
           </div>
         )}
 
@@ -86,7 +129,7 @@ function QueryPage() {
                 <div key={paciente.id} className={styles.resultsRow}>
                   <span className={styles.column}>
                     {paciente.equipamentos && paciente.equipamentos.length > 0 
-                      ? paciente.equipamentos[0].modelo 
+                      ? paciente.equipamentos.map(eq => eq.modelo).join(', ') 
                       : 'Nenhum'}
                   </span>
                   <span className={styles.column}>{paciente.nome}</span>
@@ -114,4 +157,4 @@ function QueryPage() {
   );
 }
 
-export default QueryPage;
+export default PatientQueryPage;
