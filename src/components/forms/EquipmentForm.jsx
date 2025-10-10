@@ -51,7 +51,6 @@ function EquipmentForm() {
 
             if (response.ok) {
                 alert('Equipamento cadastrado com sucesso!');
-                // Limpa o formulário para um novo cadastro
                 setFormData({
                     numero_de_serie: '',
                     modelo: '',

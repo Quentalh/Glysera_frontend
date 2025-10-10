@@ -1,4 +1,3 @@
-// src/pages/PatientQueryPage.jsx
 import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from 'react-router-dom';
 import ConsultasForm from "../components/forms/PatientQueryForm";
@@ -69,7 +68,7 @@ function PatientQueryPage() {
       if (response.ok) {
         alert("Paciente removido com sucesso!");
         setPatientToDelete(null);
-        fetchAllPatients(); // Recarrega a lista
+        fetchAllPatients();
       } else {
         alert("Erro ao remover o paciente.");
       }

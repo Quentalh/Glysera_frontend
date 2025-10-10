@@ -1,7 +1,7 @@
 import styles from "../../styles/Equipment.module.css";
-import ModeloInput from "../inputs/ModeloInput"; // Corrected import
+import ModeloInput from "../inputs/ModeloInput";
 
-function ModeloField({ name, value, onChange }){ // Accept props
+function ModeloField({ name, value, onChange }){
     return(
       <div>
         <label className={styles.textModelo}>Modelo</label>

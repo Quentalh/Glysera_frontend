@@ -117,7 +117,7 @@ a .gerenciamento_btn{
 }
 
 .dropdownMenu.open {
-  max-height: 500px; /* Large enough for your menu */
+  max-height: 500px;
   max-height: 500px;
   opacity: 1;
 }
@@ -133,7 +133,6 @@ a .gerenciamento_btn{
 
 .dropdownField {
   min-width: 100px;
-  /* Optional: add more styling as needed */
 }
 .dropdownToggleRed {
   width: 470px;

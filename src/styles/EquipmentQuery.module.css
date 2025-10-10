@@ -126,7 +126,7 @@
 
 .querybtn {
   width: 150px;
-  height: 44px; /* Ajustado para alinhar com o input */
+  height: 44px;
   border: none;
   border-radius: 6px;
   cursor: pointer;
@@ -142,7 +142,7 @@
   transform: scale(1.1);
 }
 
-/* --- ESTILOS CORRIGIDOS E UNIFICADOS --- */
+
 .editarButton, .removerButton {
     margin-top: 1rem;
     color: white;
@@ -158,7 +158,7 @@
 }
 
 .removerButton {
-  background-color: #dc3545; /* Cor vermelha para o botão de remover */
+  background-color: #dc3545;
 }
 
 .actionsContainer {
@@ -166,6 +166,6 @@
     max-width: 850px;
     display: flex;
     justify-content: flex-end;
-    gap: 1rem; /* Adicionado para espaçamento */
+    gap: 1rem;
     margin-top: 1rem;
 }

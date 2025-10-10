@@ -6,11 +6,11 @@ import styles from '../styles/Manage.module.css';
 function ManagePage() {
   const [pacientes, setPacientes] = useState([]);
   const [equipamentos, setEquipamentos] = useState([]);
-  const [unidadesDeSaude, setUnidadesDeSaude] = useState([]); // Novo estado para unidades
+  const [unidadesDeSaude, setUnidadesDeSaude] = useState([]);
   
   const [selectedPacienteId, setSelectedPacienteId] = useState('');
   const [selectedEquipamentoId, setSelectedEquipamentoId] = useState('');
-  const [selectedUnidadeId, setSelectedUnidadeId] = useState(''); // Novo estado para unidade selecionada
+  const [selectedUnidadeId, setSelectedUnidadeId] = useState('');
 
   const [isLoading, setIsLoading] = useState(false);
   const [message, setMessage] = useState('');
@@ -29,7 +29,7 @@ function ManagePage() {
       .catch(() => setMessage('Erro ao carregar equipamentos.'));
 
     // Fetch Unidades de Saude
-    fetch('http://localhost:3000/unidade_de_saudes') // Nova chamada à API
+    fetch('http://localhost:3000/unidade_de_saudes')
       .then(res => res.json())
       .then(data => setUnidadesDeSaude(data.data))
       .catch(() => setMessage('Erro ao carregar Unidades de Saúde.'));
@@ -49,7 +49,7 @@ function ManagePage() {
         body: JSON.stringify({
           paciente_id: selectedPacienteId,
           equipamento_id: selectedEquipamentoId,
-          unidade_de_saude_id: selectedUnidadeId, // Adiciona o ID da unidade ao corpo da requisição
+          unidade_de_saude_id: selectedUnidadeId,
         }),
       });
 

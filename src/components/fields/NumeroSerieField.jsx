@@ -1,7 +1,7 @@
 import styles from "../../styles/Equipment.module.css";
 import NumeroSerieInput from "../inputs/NumeroSerieInput";
 
-function NumeroSerieField({ name, value, onChange }){ // Accept props
+function NumeroSerieField({ name, value, onChange }){
     return(
       <div>
         <label className={styles.textNumeroSerie}>Número de série</label>

@@ -49,6 +49,9 @@
   background-color: #e6511a;
   transform: translateY(-3px);
 }
+.queryButton:active{
+  transform: scale(0.98);
+}
 
 .footer {
     grid-row: 10/11;

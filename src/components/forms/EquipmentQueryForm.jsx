@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import styles from '../../styles/EquipmentQuery.module.css'; // CORRIGIDO
+import styles from '../../styles/EquipmentQuery.module.css';
 
 function EquipmentQueryForm({ onSearchComplete }) {
   const [serialNumber, setSerialNumber] = useState('');

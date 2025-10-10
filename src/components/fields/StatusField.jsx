@@ -1,7 +1,7 @@
 import styles from "../../styles/Register.module.css";
 import StatusInput from "../inputs/StatusInput"
 
-function StatusField({ name, value, onChange }){ // Accept props
+function StatusField({ name, value, onChange }){
     return(
       <div>
         <label className={styles.textStatus}>Status</label>

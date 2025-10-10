@@ -68,7 +68,7 @@ function EquipmentQueryPage() {
             if (response.ok) {
                 alert('Equipamento removido com sucesso!');
                 setEquipmentToDelete(null);
-                fetchAllEquipments(); // Recarrega a lista
+                fetchAllEquipments();
             } else {
                 alert('Erro ao remover o equipamento.');
             }

@@ -120,7 +120,7 @@
 }
 
 .resultsList {
-  flex-grow: 1; /* Allows the list to take up available space */
+  flex-grow: 1;
   border: 1px solid #e0e0e0;
   border-radius: 8px;
   background-color: #ffffff;
@@ -188,13 +188,12 @@
   cursor: pointer;
 }
 
-/* --- ESTILOS CORRIGIDOS E UNIFICADOS --- */
 .actionsContainer {
   width: 100%;
   max-width: 850px;
   display: flex;
   justify-content: flex-end;
-  gap: 1rem; /* Adicionado para espaçamento */
+  gap: 1rem;
   margin-top: 1rem;
 }
 
@@ -209,5 +208,5 @@
 }
 
 .removerButton {
-  background-color: #dc3545; /* Cor vermelha para o botão de remover */
+  background-color: #dc3545;
 }
