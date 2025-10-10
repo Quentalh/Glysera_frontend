@@ -13,6 +13,7 @@ function NumeroField({ value, onChange }) {
                 onChange={onChange}
                 placeholder="Digite o número"
                 required
+                className={styles.registerCard}
             />
         </div>
     );

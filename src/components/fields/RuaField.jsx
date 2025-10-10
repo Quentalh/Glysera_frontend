@@ -13,6 +13,7 @@ function RuaField({ value, onChange }) {
                 onChange={onChange}
                 placeholder="Digite a rua"
                 required
+                className={styles.registerCard}
             />
         </div>
     );

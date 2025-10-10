@@ -13,6 +13,7 @@ function CidadeField({ value, onChange }) {
                 onChange={onChange}
                 placeholder="Digite a cidade"
                 required
+                className={styles.registerCard}
             />
         </div>
     );

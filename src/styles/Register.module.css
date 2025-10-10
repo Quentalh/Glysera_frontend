@@ -17,12 +17,16 @@
   transition: transform 0.3s; 
   color: #2e1c1c;
   background-color: #ff6b35;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.18);
 }
 
 .btnRegister:hover {
-  background-color: #84d8b9; 
+  background-color: #E85A35;
   cursor: pointer;
   transform: scale(1.1);
+}
+.btnRegister:active {
+    transform: scale(0.98);
 }
 
 .text1{
@@ -49,7 +53,9 @@
   margin-bottom: 6px;
 }
 
-.cardNome {
+
+/* Card padrão para campos de registro */
+.registerCard {
   width: 250px;
   padding: 12px 14px;
   border: 1px solid #DCE5E3;
@@ -60,174 +66,13 @@
   transition: all 0.2s ease;
 }
 
-.cardNome:focus{
-  border-color: #3FBFAD; 
-  box-shadow: 0 0 0 4px rgba(63, 191, 173, 0.2); 
+.registerCard:focus {
+  border-color: #3FBFAD;
+  box-shadow: 0 0 0 4px rgba(63, 191, 173, 0.2);
   outline: none;
 }
 
-.cardNomeSocial{
-  width: 250px;
-  padding: 12px 14px;
-  border: 1px solid #DCE5E3;
-  border-radius: 12px;
-  background: #FFFFFF;
-  color: #1a1f36;
-  font-size: 15px;
-  transition: all 0.2s ease;
-}
-
-.cardNomeSocial:focus{
-  border-color: #3FBFAD; 
-  box-shadow: 0 0 0 4px rgba(63, 191, 173, 0.2); 
-  outline: none;
-}
-
-.cardNomeMae{
-  width: 250px;
-  padding: 12px 14px;
-  border: 1px solid #DCE5E3;
-  border-radius: 12px;
-  background: #FFFFFF;
-  color: #1a1f36;
-  font-size: 15px;
-  transition: all 0.2s ease;
-}
-
-.cardNomeMae:focus{
-  border-color: #3FBFAD; 
-  box-shadow: 0 0 0 4px rgba(63, 191, 173, 0.2); 
-  outline: none;
-}
-
-.cardCep {
-  width: 250px;
-  padding: 12px 14px;
-  border: 1px solid #DCE5E3;
-  border-radius: 12px;
-  background: #FFFFFF;
-  color: #1a1f36;
-  font-size: 15px;
-  transition: all 0.2s ease;
-}
-
-.cardCep:focus{
-  border-color: #3FBFAD; 
-  box-shadow: 0 0 0 4px rgba(63, 191, 173, 0.2); 
-  outline: none;
-}
-
-.cardRua {
-  width: 250px;
-  padding: 12px 14px;
-  border: 1px solid #DCE5E3;
-  border-radius: 12px;
-  background: #FFFFFF;
-  color: #1a1f36;
-  font-size: 15px;
-  transition: all 0.2s ease;
-}
-
-.cardRua:focus{
-  border-color: #3FBFAD; 
-  box-shadow: 0 0 0 4px rgba(63, 191, 173, 0.2); 
-  outline: none;
-}
-
-.cardCidade {
-  width: 250px;
-  padding: 12px 14px;
-  border: 1px solid #DCE5E3;
-  border-radius: 12px;
-  background: #FFFFFF;
-  color: #1a1f36;
-  font-size: 15px;
-  transition: all 0.2s ease;
-}
-
-.cardCidade:focus{
-  border-color: #3FBFAD; 
-  box-shadow: 0 0 0 4px rgba(63, 191, 173, 0.2); 
-  outline: none;
-}
-
-.cardEstado {
-  width: 250px;
-  padding: 12px 14px;
-  border: 1px solid #DCE5E3;
-  border-radius: 12px;
-  background: #FFFFFF;
-  color: #1a1f36;
-  font-size: 15px;
-  transition: all 0.2s ease;
-}
-
-.cardEstado:focus{
-  border-color: #3FBFAD; 
-  box-shadow: 0 0 0 4px rgba(63, 191, 173, 0.2); 
-  outline: none;
-}
-
-.cardNumero {
-  width: 250px;
-  padding: 12px 14px;
-  border: 1px solid #DCE5E3;
-  border-radius: 12px;
-  background: #FFFFFF;
-  color: #1a1f36;
-  font-size: 15px;
-  transition: all 0.2s ease;
-}
-
-.cardNumero:focus{
-  border-color: #3FBFAD; 
-  box-shadow: 0 0 0 4px rgba(63, 191, 173, 0.2); 
-  outline: none;
-}
-
-.cardComplemento {
-  width: 250px;
-  padding: 12px 14px;
-  border: 1px solid #DCE5E3;
-  border-radius: 12px;
-  background: #FFFFFF;
-  color: #1a1f36;
-  font-size: 15px;
-  transition: all 0.2s ease;
-}
-
-.cardComplemento:focus{
-  border-color: #3FBFAD; 
-  box-shadow: 0 0 0 4px rgba(63, 191, 173, 0.2); 
-  outline: none;
-}
-
-.cardMarca {
-  width: 250px;
-  padding: 12px 14px;
-  border: 1px solid #DCE5E3;
-  border-radius: 12px;
-  background: #FFFFFF;
-  color: #1a1f36;
-  font-size: 15px;
-  transition: all 0.2s ease;
-}
-
-.cardMarca:focus{
-  border-color: #3FBFAD; 
-  box-shadow: 0 0 0 4px rgba(63, 191, 173, 0.2); 
-  outline: none;
-}
-
-.cardStatus{
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  font-size: 14px;
-  border-color: #3FBFAD; 
-  background-color: #fff;
-  transition: border 0.3s ease, box-shadow 0.3s ease;
-}
+/* ...existing code... */
 
 .cardData {
   padding: 8px 12px;
@@ -266,4 +111,7 @@
 .registerform{
   grid-row: 1/11;
   grid-column: 4/6;
+}
+.textStatus{
+  padding-right: 10px;
 }

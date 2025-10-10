@@ -13,6 +13,7 @@ function EstadoField({ value, onChange }) {
                 onChange={onChange}
                 placeholder="Digite o estado"
                 required
+                className={styles.registerCard}
             />
         </div>
     );

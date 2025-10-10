@@ -13,6 +13,7 @@ function NeighborhoodField({ value, onChange }) {
                 onChange={onChange}
                 placeholder="Digite o bairro"
                 required
+                className={styles.registerCard}
             />
         </div>
     );

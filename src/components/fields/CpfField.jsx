@@ -13,6 +13,7 @@ function CpfField({ value, onChange }) {
                 onChange={onChange}
                 placeholder="Digite o CPF"
                 required
+                className={styles.registerCard}
             />
         </div>
     );

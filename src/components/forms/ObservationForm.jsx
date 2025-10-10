@@ -6,7 +6,7 @@ import ObservationTextField from "../fields/ObservationTextField";
 import AttachmentField from "../fields/AttachmentField";
 import SaveButton from '../buttons/SaveButton';
 
-function ObservationForm({ equipmentId }) {
+function ObsForm({ equipmentId }) {
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
     texto: '',
@@ -66,4 +66,4 @@ function ObservationForm({ equipmentId }) {
   );
 }
 
-export default ObservationForm;
+export default ObsForm;

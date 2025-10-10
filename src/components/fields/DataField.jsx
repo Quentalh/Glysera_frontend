@@ -12,6 +12,7 @@ function DataField({ value, onChange }) {
                 value={value}
                 onChange={onChange}
                 required
+                className={styles.registerCard}
             />
         </div>
     );

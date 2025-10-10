@@ -15,8 +15,8 @@
 }
 .containercadastro{
   display: grid;
-  grid-template-rows: repeat(6,1fr);
-  grid-template-columns: repeat(2,1fr);
+  grid-template-rows: repeat(4,1fr);
+  grid-template-columns: repeat(6,1fr);
   align-items: center;
   grid-row: 3/8;
   grid-column: 4/6;
@@ -26,14 +26,16 @@
   height: 100%;
   display:flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   align-items:center;
-  grid-row: 1 / 3;
-  grid-column: 1 / 3;
+  grid-row: 2/8;
+  grid-column: 4/6;
+
 }
 .containerbtn{
   grid-row: 3/4;
   grid-column: 1/3;
+  padding-top: 10px;
 }
 .containerobs{
   grid-row: 2/3;
@@ -51,6 +53,7 @@
   background-color: #ff6b35;
 }
 
+
 .textNumeroSerie, .textMarca, .textModelo {
   font-size: 14px;
   font-weight: 600;
@@ -60,15 +63,15 @@
 }
 
 .Numeroserieinput, .ModuleInput, .Marcainput {
-  width: 250px;
-  padding: 12px 14px;
-  border: 1px solid #DCE5E3;
-  border-radius: 12px;
-  background: #FFFFFF;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+  border-color: #DCE5E3;
+  background-color: #fff;
   color: #1a1f36;
-  font-size: 15px;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
   box-shadow: 0 4px 16px rgba(0,0,0,0.18);
-  transition: all 0.2s ease;
 }
 
 .Numeroserieinput:focus, .ModuleInput:focus, .Marcainput:focus {

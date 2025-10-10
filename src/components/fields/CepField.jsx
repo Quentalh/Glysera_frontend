@@ -13,6 +13,7 @@ function CepField({ value, onChange }) {
                 onChange={onChange}
                 placeholder="Digite o CEP"
                 required
+                className={styles.registerCard}
             />
         </div>
     );

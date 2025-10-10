@@ -1,11 +1,18 @@
 import styles from "../../styles/Register.module.css";
-import SexoInput from "../inputs/SexoInput"
 
 function SexoField(){
     return(
         <div>
-          <label className={styles.textSexo}>Sexo</label>
-          <SexoInput/>
+            <label htmlFor="rua" className={styles.textField}>Sexo</label>
+            <input
+                type="text"
+                id="sexo"
+                name="sexo"
+                value={value}
+                onChange={onChange}
+                placeholder="Digite o sexo paciente"
+                required
+            />
         </div>
     );
 }

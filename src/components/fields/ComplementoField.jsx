@@ -12,6 +12,7 @@ function ComplementoField({ value, onChange }) {
                 value={value}
                 onChange={onChange}
                 placeholder="Digite o complemento"
+                className={styles.registerCard}
             />
         </div>
     );

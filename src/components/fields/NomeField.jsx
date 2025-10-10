@@ -13,6 +13,7 @@ function NomeField({ value, onChange }) {
                 onChange={onChange}
                 placeholder="Digite seu nome"
                 required
+                className={styles.registerCard}
             />
         </div>
     );

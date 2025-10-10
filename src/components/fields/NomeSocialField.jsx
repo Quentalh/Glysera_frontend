@@ -12,6 +12,7 @@ function NomeSocialField({ value, onChange }) {
                 value={value}
                 onChange={onChange}
                 placeholder="Digite seu nome social"
+                className={styles.registerCard}
             />
         </div>
     );
